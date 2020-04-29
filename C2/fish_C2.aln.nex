@@ -1,0 +1,230 @@
+#NEXUS
+[written Fri Feb 21 08:11:11 EST 2020 by Mesquite  version 3.61 (build 927) at vqf/127.0.1.1]
+
+BEGIN TAXA;
+	TITLE Taxa;
+	DIMENSIONS NTAX=49;
+	TAXLABELS
+		'astMex2.0_hcXA' 'astMex2.0_hcXB' 'astMex2.0_hcXC' 'astMex2.0_hcXD' 'cluHar1_hcXA' 'cluHar1_hcXB' 'cluHar1_hcXD' 'cynSem1.0_hcXA' 'cynSem1.0_hcXB' 'cynSem1.0_hcXC' 'cypCar_hcXA' 'cypCar_hcXB' 'cypCar_hcXC' 'cypCar_hcXD' 'danRer11_hcXA' 'danRer11_hcXB' 'danRer11_hcXC' 'danRer11_hcXD' 'danRer11_hcXE' 'danRer11_hcXF' 'danRer11_hcXG' 'danRer11_hcXH' 'esoLuc3_hcXA' 'esoLuc3_hcXB' 'esoLuc3_hcXC' 'oryLat1_hcXA' 'oryLat1_hcXB' 'salSal2_hcXA' 'salSal2_hcXB' 'salSal2_hcXD' 'salSal2_hcXE' 'salSal2_hcXG' 'salSal2_hcXH' 'salSal2_hcXI' 'salSal2_hcXJ' 'salSal2_hcXK' 'salSal2_hcXL' 'salSal2_hcXM' 'salSal2_hcXN' 'salSal2_hcXO' 'salSal2_hcXP' 'astMex2.0_hcN' 'astMex2.0_hcL' 'danRer11_hcA' 'astMex2.0_hcB' 'astMex2.0_hcK' 'salSal2_hcD' 'hsap_PRF1' 'cel_unc-13' 
+	;
+
+END;
+
+
+BEGIN CHARACTERS;
+	TITLE  Character_Matrix;
+	DIMENSIONS  NCHAR=166;
+	FORMAT DATATYPE = Protein GAP = - MISSING = ?;
+	MATRIX
+	'astMex2.0_hcXA' VA--------HLELT--DAAVRVWGMRASRLEGDPTG-PPDPYLKVWCGSSF-AGMTQFYRDTSSPSWNAEFHIPSCRA--NDNLKLEVWDKDLN------------VDDHLGTCITQ-VRYGSNNN-KSCRVGK--------------------G-T--LTYNYK
+	'astMex2.0_hcXB' AS--------HMMLG--DAVVTVTRISASGLAVDESGTKPDPYIKAWCNGVY-GGKTSSGSNNSSPSWIVKFDFSDCKA--GHTLKLEVWDKNLF------------FDKLLGSCSHK-VLSGSNT--SRCTLIK--------------------G-S--LSSTYN
+	'astMex2.0_hcXC' AS--------HMMLG--DAAVTVSNLRASGLSGDAFGNRPDPYVKLWCNSVY-GGRTDTIKDTTSPNWAGTYTFSSCRA--GHSVRLEVWDQDLT------------NDDLLGSCSRT-TSSGSRS--TSCSLNK--------------------G-T--VYFSYS
+	'astMex2.0_hcXD' VS--------YVALG--DAGTTVTDLSATGLSGDAFGNRPDPYVKLFCNNSY-GGRTDTIKGTHSPNWAGRFTF-SCRP--GATLKLEVWDQDIN------------NDDRLGTCTHK-LVKGTHG--SKCSLKK--------------------G-T--VRFNYS
+	'cluHar1_hcXA'  LS--------LLCVA--TADVRVWGIRAYGLSGDAWS-PPDPYVKVFCGNAF-GGTTEFIKNNANPSWSAAFSFPHGRP--GDALKLEVWDKDLM------------RDDHLGTCTTT-VQNGSNS--MSCSLRK--------------------G-R--VQFRYE
+	'cluHar1_hcXB'  LS--------LLCVA--TADVRVRGLRGYGLNGDAKS-DPDPYVKVFCGYAF-GGQTESIDENPNPTWHAAFSFPDGRP--GDVLKLEVWERDKM------------YDDHLGTCTTT-VQSGSHK--ISCSLAR--------------------G-R--IEFHYE
+	'cluHar1_hcXD'  LS--------LLCVA--TADVRVWGICAYGLSGDFWS-PPDPYVKVYCGHAF-GGMTDFIWDNANPSWSAQFSFPSGRP--GDVLRLEVWDKDLM------------NDDHLGTCITT-VQRGSRS--LSCSFGY--------------------G-R--LEFRYE
+	'cynSem1.0_hcXA' CS---------LAVA--KAQLKVFNLRATDLPADIFG-VTDGYVKVSCMAAV-LGQTEVRKNSANPWWEEEFFYYEAQE--NDILRLELHDEDFI------------FDDLLGVCQIN-IKPGTHE--HDCYLDK--------------------G-V--LYYSYT
+	'cynSem1.0_hcXB' CS---------LAVA--KAQLKVFNLRATDLPADIFG-VTDGYVKVSCMSAI-LGQTEVRHNSANPWWDEQFFYYEAQE--NDILRLELHDEDVI------------FDDLLGACQIN-IKPGTHE--HNCYLEK--------------------G-V--LYYSYT
+	'cynSem1.0_hcXC' CG---------LSLA--AAQLRVFNLRASGLPSDLLG-TTDGYVTVFCASNS-LGKTSVRNNNANPWWEEEFSYFKAQE--GDVLRLEVHDRDVL------------FDDLIGVCQRQ-IKVGTNS--HDCYLKK--------------------GGT--LHYTYT
+	'cypCar_hcXA'   VS--------QLDFS--SAAVVLSGLKGTNLPGDALGNTPDPYVKIWCGGEY-K-KTNHFPGTSYPVWTSSYSFSGCRS--GQTLELQVWDQDVK------------YDDLLGSFRTT-VRTGSI-S-GSFSVGK--------------------G-K--MYLPTA
+	'cypCar_hcXB'   VS--------QLDFS--SAAVVLSGLKGTNLPGDALGNTPDPYVKIWCGGEY-K-KTNHFPGTSYPVWTSSYSFSGCRS--GQTLELQVWDQDVK------------YDDLLGSFRTT-VRTGSI-S-GSFSVGK--------------------G-K--MYFKYD
+	'cypCar_hcXC'   VS--------QLDFS--SAAVVLSGLKGTNLPGDALGNSPDPYVKIWCGGEY-K-KTNHFPGTSYPVWTSSYSFSGCRS--GQTLELQVWDQDVK------------YDDLLGSFRTT-VRTGSI-S-G*------------------------------------
+	'cypCar_hcXD'   AS--------QLDFA--SAGVRVFGLHARDLNGDPAGNKPDPYVKVWCGSTF-GGQTEFHKDNAHPTWSAEFYFPNCKA--TETLKLEVWDKDLN------------FDDHLGTCNEQ-VQYGSFA--LHCYPKK--------------------G-T--MFYKYE
+	'danRer11_hcXA' AS--------QLDFA--SASVRVFGLHARDLTGDPFGNEPDPYVKVWCGAVS-GGQTEYHKDNANPTWSAEFNFPNCKC--GDDVKLEIWDKDKT------------FDDHLGTCNKL-VQYGSFA--VTCYLNK--------------------G-T--FFYRYE
+	'danRer11_hcXB' SS--------QLDFA--KAAVVLSGLKGSNLPGDALGNKPDPYVKIWCGSSS-V-VTGYFKNNANPSWDAEYYLSGCVS--RNTIRLEVWDKDAK------------YDDRIGSYSGT-VASGTNNK-VSFSVGK--------------------G-T--MSFKYD
+	'danRer11_hcXC' AS--------QLDFA--SASVRVFALYARDLTGDPAGNKPDPYVKIWCGSTF-GGQTEYHKDNANPVWSAEFNFPNCKS--KETLKLEVWDKDLN------------FDDKLGTCTKT-VEYGLSS--VTCHLKK--------------------G-S--LFYKYE
+	'danRer11_hcXD' AF--------HLDFG--KADVRVFDIHAMDLSGDVIGNKPDPYIKIWCGSTF-GGMTEFLNSTNNPEWSAEFSFPICKA--TEILKLEVWDKDLF------------FDDKLGTCTRT-VQYGSFD--IPCHLSK--------------------G-T--LFYKYE
+	'danRer11_hcXE' AS--------QLDFA--SASVRVFGLHARDLTGDPFGNEPDPYVKVWCGAVS-GGQTEYHKDNANPTWSAEFNFPNCKC--GDDVKLEIWDKDKT------------FDDHLGTCNKL-VQYGSFA--VTCYLNK--------------------G-T--FFYRYE
+	'danRer11_hcXF' SS--------QLDSA--KAAVVLSGLKGSNLPGDALGNKPDPYVKIWCGSSS-V-VTGYFKNNANPSWDAEYYLSGCVS--RNTIRLEVWDKDAK------------YDDRIGSYSGT-VASGTNNK-VSFSVGK--------------------G-T--MSFKYD
+	'danRer11_hcXG' AS--------QLDFA--SASVRVFALYARDLTGDPAGNKPDPYVKIWCGSTF-GGQTEYHKDNANPVWSAEFNFPNCKS--KETLKLEVWDKDLN------------FDDKLGTCTKT-VEYGLSS--VTCHLKK--------------------G-S--LFYKYE
+	'danRer11_hcXH' AF--------HLDFG--KADVRVFDIHAMDLSGDVIGNKPDPYIKIWCGSTF-GGMTEFLNGTNNPEWSAEFSFPICKA--TEILKLEVWDKDLF------------FDDKLGTCTRT-VQYGSFD--IPCHLSK--------------------G-T--LFYKYE
+	'esoLuc3_hcXA'  CVL----SVVRIYG-EERMVLKVLNLRASNLNNGMFQ-TPDGYVKVFLGPRY-GGKTEVRNDQHDPWWKEEFGFFNALE--NDLLKLEVYDSDFV------------IDDLLGSCERS-IKNGTFQ--HECFLKK--------------------GGT--LHYTYT
+	'esoLuc3_hcXB'  CVL----AVVQIYG-EERMVLKVFNLRATKLNSGMFQ-TPDAYVKVFMGSAY-GGKTVVRNDNTDPWWGEDFAFFNARV--NNALKLEVYDSDMV------------FDDLLGTCERA-IKNGTFQ--HSCNLNE--------------------GGT--LHYSYT
+	'esoLuc3_hcXC'  GAL----SLVHCDQY--YGHVRVWGISATNLNGDILS-QPDPYVKVWCGPAF-GGMTSLLKNQANPTWPGEFNFLDIIH--KSVLKLEVWDDDNG------------PDDRLGTCTTT-IRKGTNI--ETCHLKK--------------------G-I--LYYTYS
+	'oryLat1_hcXA'  LGL----TVA-------EAQLRLYNLRASDLPSDLLG-TSDGYVQVYSGSTY-LGKTAVRKNDPDPWWEEEFQHFKAKE--GDELKLEVYDQDLL------------FHDLVGVCQRQ-MKLGTHT--HDCYLKK--------------------GGV--LTYTYT
+	'oryLat1_hcXB'  KKL----ATNCCPMRARRGTLQVTIIRGWNLKGDLIG-RTESYAKMWFGSHY--RRTRT-IRSNDPRWNAYYNLGKVDT--NPGLKVEVWDKDVK------------HDDLLGSCVRS-VFRGTRR--FTCPAKK--------------------G-G--FEVQYT
+	'salSal2_hcXA'  CTL----ALVHCDLN--GGPLRVYDIRAANLKRWLFI-KPSPYVKVWCGSSF-HGQSNTLEKQENPVWPDKFNFADILP--NSVLTIEVWDDVVG------------LDHHMGTCRIT-IRPGTHN--ETCQLNR--------------------G-T--VYYSYS
+	'salSal2_hcXB'  CTL----ALVHCDLN--GGPLRVYDIRAANLKRWLFI-KPSPYVKVWCGSSF-HGQSNTLEKQENPVWPDKFNFADILP--NSVLTIEVWDDVVG------------LDHHMGTCRIT-IRPGTHN--ETCQLNR--------------------G-T--VYYSYS
+	'salSal2_hcXD'  CTL----AIVHCDLD--DVHVRVWGLSASNLKGD-LS-QPDPYVKVWYGTVF-GGMSSILKNQANPTWPSEFNFVDIIH--KSVLKLEVWDNNVG------------PDHLLGTCTTT-IHPGTHT--ETCQLKR--------------------G-T--VYYTYS
+	'salSal2_hcXE'  CTL----ALVHCDLH--DGPIRVYGIRASNLKGRFFS-KPDPYVRVWCASSF-HGKSSILKKQENPTWPDKFNFANIIH--NSVLKLEVWDDVIG------------PDRRLGTCTTT-IRPGTHT--EICHLKK--------------------S-T--VYYTYS
+	'salSal2_hcXG'  CTL----ALVHCDLY--DGHVRVWGLSASNLKGDFLS-QPDPYVKVWCGPAF-GGMSSILKNQANPTWPGEFNFVDIIH--NSVLKLEVWDNNVG------------PDHRLGTCSTT-IRRGTHT--ETCHLKK--------------------G-T--VYYTYS
+	'salSal2_hcXH'  CTL----ALVHCDLY--DGHVRVWGLSASNLKGDLLS-QPDPYVKVWCGPTF-GGMSSILKNQANPTWPGEFNFVDIIH--KSVLKLEVWDDDAG------------PDHRLGTCSTT-IRRGTHT--ETCHLKK--------------------G-T--VYYTYS
+	'salSal2_hcXI'  CTL----ALVHCDLD--DSHVRVWGLSASNLKGDLLS-QPDPYVKVWCGPAF-GGMTSILKNQANPTWPGEFNFLDIIH--KSVLKLEVWDQDAG------------PDNRLGTCTTT-VYPGTHT--ETCHLKR--------------------G-T--VYYTYS
+	'salSal2_hcXJ'  CVL----TVVQIYAAEERKVLKVFNLRASDLNSGLFQ-TPDAYVKVFMGSGY-GGKTEVKNNNHDPWWKEDFNFFNAHE--NNPMRLEVYDSDLL------------FDDLLGTCERS-IKIGTWQ--HQCFLKK--------------------GGT--LYYSYT
+	'salSal2_hcXK'  CVL----TVVQIYAAEEPKVLKVFNLRASDLNSGLFQ-TPDAYVKVFSGAGY-GGKTEVKTDNHDPWWKEDFNFFNVRE--NDPMRLEVYDSDVL------------FDDLLGTCERA-IKNGTWQ--HSCSIKR--------------------GGT--LYYSYT
+	'salSal2_hcXL'  CVL----TVVQIYAAEEPKVLKVFNLRASDLDSDLLG-IPDAYVEVFRAYGF-LGRTEVKNNNADPAWEEEFSFLNAHE--NNTLRLEVYDSDIF------------FDDLLGTCECS-IKIGTWQ--HQCFLKT--------------------GGT--LYYSYI
+	'salSal2_hcXM'  CVL----TVVQIYAAEEPKVLKVFNLHATDLHSSLLG-TPDAYVEVFRAYGF-LGRTEVKNDNHDPSWQEEFSYLNARE--NNILRMEVYDSDIN------------SDDLLGTCERS-IKNGTWK--HQCFLKK--------------------GGT--LNYSYT
+	'salSal2_hcXN'  CVL----TVVQVYAAEETKVLKVFNLRATDLHSSLLG-TPDAYVEVFRAYGF-LGRTEVKNNNHDPSWQEEFSYLNARE--NNILRLEVYDSDIL------------SDDLLGTCQRS-IKNGTWK--HQCFLKT--------------------GGI--LNYSYT
+	'salSal2_hcXO'  CM--------LVGVH--GANVRVSGLQASGLRGDPAGNYPDPYVKVWCGGEP-GGMTDWHKDTQNPSWSAVFNFLNVPS--SASLKFEIWDKDLN------------FDDHLGTCTTK-VQFGSHS--VTCGLSS--------------------G-T--FYYTYS
+	'salSal2_hcXP'  CM--------LVGVH--GANVRVSGLHASGLRGDPAGNYPDPYVKVWCGGEP-GGMTDWHKDTQNPSWSAVFNFLNVPS--SASLKFEIWDKDLN------------FDDHLGTCTTK-VQFGSHS--VTCGLSS--------------------G-T--FYYTYS
+	'astMex2.0_hcN' PNL----SPNCCPFNSQRGWMSVTVIRAWGLKGDPVG-KTEGYVKVWYEGQF--RQTHW-IRSNDPWWNLRYDLGNVYS--GGRLRLEVWDKDVR------------YDDHLGGCSVS-VRTGKHR--HACGLNR--------------------G-G--FEFSYE
+	'astMex2.0_hcL' PNL----DHNCCPLRAGRGTLRVAVQRANGLKADLFT-RTDGYVKVWYANMY--EETEVVMDDNNPEWNISYNFGSIDF--GHELTFEVWDSDVM------------YNDMVGRCVVY-PERGIHS--HSCKLKK--------------------G-V--FYFTYI
+	'danRer11_hcA'  VNV----NSNCCPNKPGVATLTVTVVSAAGLWGDVFS-KTDGYVKVFYGSHT--AQTPVIWNNNFPQWNFRAEFGTVDLTK-KALQFQVWDRDNG-----------FDDDLLGKGAVVPEKGVNVP--KRFGFKH--------------------G-S--LMISYS
+	'astMex2.0_hcB' QVI----TANCCPAEKNLATLRVYNLHANGLYGDVWT-ATDGSVEVSYGS--TIARTQVINNNNNPWWRESFQFGPVKLSKGRKLTFKIYDADYY-----------WNSDFLGQCSID-LKSGVVT--NACYLKH--------------------G-T--FFYTYS
+	'astMex2.0_hcK' PGM----TPDCCPSKRGLARVIVTVERASGLWGDTTT-ATDAFVKVFDKNMMSIGRTPVIYNNDSPHWGMAFDLGDVVLTSPDSVRFEVWDEDNK-----------WDDDLLGACSVD-IKAGQTQ--NFCSLNH--------------------G-L--LYYKTE
+	'salSal2_hcD'   KEM----TSQCCPQEKGLAHLTVTVKYARGLWGDTTS-QTDGFVKVFMDDKA--MQTNVIYNNDNPAWNKALYFENVKLSLASELKFAVYDEDKHWF--------KWWNDLLGECSVRPILVGSHN--SMCPMNH--------------------G-T--LYFSYK
+	'hsap_PRF1'     AVT----TQDCCPRQRGLAQLEVTFIQAWGLWGDWFT-ATDAYVKLFFGGQE--LRTSTVWDNNNPIWSVRLDFGDVLLATGGPLRLQVWDQDSG-----------RDDDLLGTCDQA-PKSGSHE--VRCNLNH--------------------G-H--LKFRYH
+	'cel_unc-13'    ETLKTVKASILEGSSKWSAKITLTVLCAQGLIAKDKTGKSDPYVTAQVGKTK--RRTRTIHQELNPVWNEKFHFECHNS--TDRIKVRVWDEDNDLKSKLRQKLTRESDDFLGQTVIE-VRTLSGEMDVWYNLEKRTDKSAVSGAIRLHINVEIKGEEKLAPYHVQ
+
+;
+
+
+END;
+
+BEGIN ASSUMPTIONS;
+	TYPESET * UNTITLED   =  unord:  1- 166;
+
+END;
+
+BEGIN NOTES;
+
+	TAXABITS   NAME = newlyAddedTaxon on =  1 -  49;
+
+END;
+
+BEGIN CODONS;
+	CODESET * UNTITLED   =  universal:  1- 166;
+
+
+END;
+
+BEGIN MESQUITECHARMODELS;
+	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1- 166;
+END;
+
+Begin MESQUITE;
+		MESQUITESCRIPTVERSION 2;
+		TITLE AUTO;
+		tell ProjectCoordinator;
+		timeSaved 1582290672173;
+		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			setID 0 2688020822076938860;
+		endTell;
+		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
+		tell It;
+			setID 0 7271125518071289330;
+			mqVersion 361;
+			checksumv 0 3 3306718539 null  getNumChars 166 numChars 166 getNumTaxa 49 numTaxa 49   short false   bits 2097151   states 2097151   sumSquaresStatesOnly 9.637241985549E13 sumSquares 9.637241985549E13 longCompressibleToShort false usingShortMatrix false   NumFiles 1 NumMatrices 1;
+			mqVersion;
+		endTell;
+		getWindow;
+		tell It;
+			suppress;
+			setResourcesState false false 100;
+			setPopoutState 300;
+			setExplanationSize 0;
+			setAnnotationSize 0;
+			setFontIncAnnot 0;
+			setFontIncExp 0;
+			setSize 1759 875;
+			setLocation 0 27;
+			setFont SanSerif;
+			setFontSize 10;
+			getToolPalette;
+			tell It;
+			endTell;
+			desuppress;
+		endTell;
+		getEmployee  #mesquite.charMatrices.BasicDataWindowCoord.BasicDataWindowCoord;
+		tell It;
+			showDataWindow #7271125518071289330 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
+			tell It;
+				getWindow;
+				tell It;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 1659 803;
+					setLocation 0 27;
+					setFont SanSerif;
+					setFontSize 10;
+					getToolPalette;
+					tell It;
+						setTool multiBlockSplitter;
+					endTell;
+					setActive;
+					setTool multiBlockSplitter;
+					colorCells  #mesquite.charMatrices.ColorByState.ColorByState;
+				tell It;
+					setStateLimit 9;
+					toggleUniformMaximum on;
+				endTell;
+					colorRowNames  #mesquite.charMatrices.TaxonGroupColor.TaxonGroupColor;
+					colorColumnNames  #mesquite.charMatrices.CharGroupColor.CharGroupColor;
+					colorText  #mesquite.charMatrices.NoColor.NoColor;
+					setBackground White;
+					toggleShowNames on;
+					toggleShowTaxonNames on;
+					toggleTight off;
+					toggleThinRows on;
+					toggleShowChanges off;
+					toggleSeparateLines off;
+					toggleShowStates on;
+					toggleReduceCellBorders off;
+					toggleAutoWCharNames off;
+					toggleAutoTaxonNames off;
+					toggleShowDefaultCharNames off;
+					toggleConstrainCW on;
+					toggleBirdsEye off;
+					toggleShowPaleGrid off;
+					toggleShowPaleCellColors off;
+					toggleShowPaleExcluded off;
+					togglePaleInapplicable on;
+					togglePaleMissing off;
+					toggleShowBoldCellText off;
+					toggleAllowAutosize off;
+					toggleColorsPanel off;
+					toggleLinkedScrolling on;
+					toggleScrollLinkedTables off;
+				endTell;
+				showWindow;
+				getWindow;
+				tell It;
+					forceAutosize;
+				endTell;
+				getEmployee #mesquite.charMatrices.AlterData.AlterData;
+				tell It;
+					toggleBySubmenus off;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorCells.ColorCells;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.categ.StateNamesStrip.StateNamesStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.AnnotPanel.AnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+				getEmployee #mesquite.charMatrices.CharReferenceStrip.CharReferenceStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.QuickKeySelector.QuickKeySelector;
+				tell It;
+					autotabOff;
+				endTell;
+				getEmployee #mesquite.charMatrices.SelSummaryStrip.SelSummaryStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.align.AlignToDropped.AlignToDropped;
+				tell It;
+					gapCosts 16 6 1 1;
+					subCosts  5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5;
+				endTell;
+				getEmployee #mesquite.molec.SequenceInfoEditor.SequenceInfoEditor;
+				tell It;
+					panelOpen false;
+				endTell;
+			endTell;
+		endTell;
+		endTell;
+end;
+
+

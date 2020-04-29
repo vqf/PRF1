@@ -1,0 +1,129 @@
+#NEXUS
+begin taxa;
+	dimensions ntax=27;
+	taxlabels
+	balBon1_hgA
+	bosTau1_2_hgA
+	chiPla1_hcA
+	conChr_hgA
+	conChr_hgB
+	dasNov3_hgA
+	dasNov3_hgB
+	dasNov3_hgC
+	delLeu2_hgA
+	equCab3_0_hgA
+	eriEur2_hgB
+	eriEur2_hgC
+	hetGla2_hgA
+	hsap_hgA
+	loxAfr3_hgA
+	mmus_hgA
+	neoSch_hgA
+	neoSch_hgB
+	orcOrc1_1_hgA
+	ornAna1_p_v1_hgA
+	ornAna1_p_v1_hgB
+	ornAna1_p_v1_hgF
+	ornAna1_p_v1_hgG
+	phaCin2_0_hgA
+	phyCat1_hgA
+	proCap1_hgA
+	susScr11_1_hgA
+;
+end;
+
+begin trees;
+	tree con_50_majrule = [&U] (balBon1_hgA[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.027603708,length_median=0.02699447,length_95%HPD={0.01235999,0.04302126}]:0.026994,(delLeu2_hgA[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.0190638449,length_median=0.01849642,length_95%HPD={0.007971735,0.03101622}]:0.018496,orcOrc1_1_hgA[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.0226345679,length_median=0.02196397,length_95%HPD={0.01061953,0.03578106}]:0.021964)[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.0126152022,length_median=0.01203112,length_95%HPD={0.003196662,0.02286678}]:0.012031,((bosTau1_2_hgA[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.130281632,length_median=0.1295104,length_95%HPD={0.09573867,0.1652035}]:0.12951,(((((((((dasNov3_hgA[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.0235993999,length_median=0.02281833,length_95%HPD={0.01041135,0.03790227}]:0.022818,dasNov3_hgB[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.046817329,length_median=0.04647187,length_95%HPD={0.02706065,0.06692013}]:0.046472)[&prob=0.663496578,prob_stddev=0.0294130276,prob_range={0.642698427,0.684294729},prob(percent)="66",prob+-sd="66+-3",length_mean=0.0124968881,length_median=0.01182878,length_95%HPD={0.001621125,0.02455023}]:0.011829,dasNov3_hgC[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.0313281206,length_median=0.03064409,length_95%HPD={0.01333028,0.04944485}]:0.030644)[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.133830834,length_median=0.1328293,length_95%HPD={0.09706083,0.1747273}]:0.132829,(loxAfr3_hgA[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.128863194,length_median=0.1276559,length_95%HPD={0.09343245,0.1692311}]:0.127656,proCap1_hgA[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.157675808,length_median=0.1567256,length_95%HPD={0.1176586,0.1997091}]:0.156726)[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.0976221436,length_median=0.09710348,length_95%HPD={0.05635508,0.1409628}]:0.097103)[&prob=0.686605635,prob_stddev=0.115892357,prob_range={0.604657364,0.768553906},prob(percent)="69",prob+-sd="69+-12",length_mean=0.0394457986,length_median=0.03858151,length_95%HPD={0.01662581,0.06273974}]:0.038582,hsap_hgA[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.141219534,length_median=0.1404813,length_95%HPD={0.1024349,0.1805464}]:0.140481)[&prob=0.525108879,prob_stddev=0.128462027,prob_range={0.434272509,0.615945249},prob(percent)="53",prob+-sd="53+-13",length_mean=0.0206979344,length_median=0.01980579,length_95%HPD={0.004460767,0.03780481}]:0.019806,(hetGla2_hgA[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.176027987,length_median=0.1747824,length_95%HPD={0.1307565,0.2223004}]:0.174782,((((ornAna1_p_v1_hgA[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.0275568013,length_median=0.0267027,length_95%HPD={0.008967377,0.04686059}]:0.026703,ornAna1_p_v1_hgB[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.0468607366,length_median=0.04582352,length_95%HPD={0.02467953,0.06955858}]:0.045824)[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.20422366,length_median=0.2029367,length_95%HPD={0.1464067,0.261452}]:0.202937,ornAna1_p_v1_hgF[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.319813654,length_median=0.3185186,length_95%HPD={0.248071,0.3977278}]:0.318519)[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.127058645,length_median=0.1263179,length_95%HPD={0.06428991,0.1878734}]:0.126318,(ornAna1_p_v1_hgG[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=1.229965,length_median=1.222783,length_95%HPD={0.9985292,1.50554}]:1.222783,chiPla1_hcA[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.87762892,length_median=0.8737542,length_95%HPD={0.6794506,1.083576}]:0.873754)[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.315172391,length_median=0.3130363,length_95%HPD={0.1712713,0.4612311}]:0.313036,phaCin2_0_hgA[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.333882749,length_median=0.332987,length_95%HPD={0.2601636,0.4137075}]:0.332987)[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.184890806,length_median=0.1832333,length_95%HPD={0.1204125,0.2521111}]:0.183233,mmus_hgA[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.245238988,length_median=0.243805,length_95%HPD={0.1838748,0.3118995}]:0.243805)[&prob=0.602790863,prob_stddev=0.139900426,prob_range={0.503866323,0.701715403},prob(percent)="60",prob+-sd="60+-14",length_mean=0.0444690425,length_median=0.04362293,length_95%HPD={0.01169247,0.07679491}]:0.043623)[&prob=0.620211537,prob_stddev=0.145179688,prob_range={0.517553995,0.722869078},prob(percent)="62",prob+-sd="62+-15",length_mean=0.0291283003,length_median=0.02797607,length_95%HPD={0.008012871,0.05334623}]:0.027976)[&prob=0.96493645,prob_stddev=0.00383374932,prob_range={0.96222558,0.96764732},prob(percent)="96",prob+-sd="96+-0",length_mean=0.0265533804,length_median=0.02557235,length_95%HPD={0.008723984,0.04536136}]:0.025572,((eriEur2_hgB[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.155733329,length_median=0.1549135,length_95%HPD={0.1076441,0.2058212}]:0.154914,eriEur2_hgC[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.496883377,length_median=0.4950201,length_95%HPD={0.4099972,0.5885905}]:0.49502)[&prob=0.998311261,prob_stddev=3.77090098E-4,prob_range={0.998044618,0.998577904},prob(percent)="100",prob+-sd="100+-0",length_mean=0.0622251812,length_median=0.06051938,length_95%HPD={0.02213824,0.1067643}]:0.060519,(conChr_hgA[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.13948638,length_median=0.1389393,length_95%HPD={0.09585614,0.1818283}]:0.138939,conChr_hgB[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.194806234,length_median=0.1937454,length_95%HPD={0.1459372,0.2453306}]:0.193745)[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.259057666,length_median=0.2576537,length_95%HPD={0.1961794,0.3233685}]:0.257654)[&prob=0.883832548,prob_stddev=0.00251393398,prob_range={0.882054928,0.885610168},prob(percent)="88",prob+-sd="88+-0",length_mean=0.041902573,length_median=0.04129502,length_95%HPD={0.01241867,0.07290166}]:0.041295)[&prob=0.668607235,prob_stddev=0.0321155066,prob_range={0.645898142,0.691316327},prob(percent)="67",prob+-sd="67+-3",length_mean=0.0190233719,length_median=0.01803836,length_95%HPD={0.00303544,0.03741634}]:0.018038,(neoSch_hgA[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.00175105486,length_median=0.001226671,length_95%HPD={2.278741E-8,0.00526485}]:0.001227,neoSch_hgB[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.00171977743,length_median=0.001182418,length_95%HPD={2.73562E-7,0.005158221}]:0.001182)[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.168256025,length_median=0.1669244,length_95%HPD={0.12758,0.2110715}]:0.166924)[&prob=0.571993601,prob_stddev=0.0363891944,prob_range={0.546262554,0.597724647},prob(percent)="57",prob+-sd="57+-4",length_mean=0.0249306606,length_median=0.02409794,length_95%HPD={0.006847298,0.04318833}]:0.024098,equCab3_0_hgA[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.122081076,length_median=0.1214345,length_95%HPD={0.08842277,0.1577963}]:0.121435)[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.0455830146,length_median=0.04458417,length_95%HPD={0.02295223,0.0686044}]:0.044584,susScr11_1_hgA[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.09266991,length_median=0.0920364,length_95%HPD={0.06403157,0.1225709}]:0.092036)[&prob=0.994178295,prob_stddev=0.00119411864,prob_range={0.993333926,0.995022665},prob(percent)="99",prob+-sd="99+-0",length_mean=0.0249768055,length_median=0.02405307,length_95%HPD={0.006765984,0.04505963}]:0.024053)[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.0428861795,length_median=0.04211895,length_95%HPD={0.02289221,0.06474173}]:0.042119,phyCat1_hgA[&prob=1.0,prob_stddev=0.0,prob_range={1.0,1.0},prob(percent)="100",prob+-sd="100+-0",length_mean=0.0298451339,length_median=0.02891704,length_95%HPD={0.01508562,0.04671227}]:0.028917)[&prob=0.520398187,prob_stddev=0.00213684389,prob_range={0.51888721,0.521909164},prob(percent)="52",prob+-sd="52+-0",length_mean=0.00953377204,length_median=0.008756677,length_95%HPD={0.00177088,0.01930672}]:0.008757);
+end;
+
+begin figtree;
+	set appearance.backgroundColorAttribute="Default";
+	set appearance.backgroundColour=#ffffff;
+	set appearance.branchColorAttribute="User selection";
+	set appearance.branchColorGradient=false;
+	set appearance.branchLineWidth=1.0;
+	set appearance.branchMinLineWidth=0.0;
+	set appearance.branchWidthAttribute="Fixed";
+	set appearance.foregroundColour=#000000;
+	set appearance.hilightingGradient=false;
+	set appearance.selectionColour=#2d3680;
+	set branchLabels.colorAttribute="User selection";
+	set branchLabels.displayAttribute="Branch times";
+	set branchLabels.fontName="Bitstream Charter";
+	set branchLabels.fontSize=8;
+	set branchLabels.fontStyle=0;
+	set branchLabels.isShown=false;
+	set branchLabels.significantDigits=4;
+	set layout.expansion=0;
+	set layout.layoutType="RECTILINEAR";
+	set layout.zoom=0;
+	set legend.attribute=null;
+	set legend.fontSize=10.0;
+	set legend.isShown=false;
+	set legend.significantDigits=4;
+	set nodeBars.barWidth=4.0;
+	set nodeBars.displayAttribute=null;
+	set nodeBars.isShown=false;
+	set nodeLabels.colorAttribute="User selection";
+	set nodeLabels.displayAttribute="prob";
+	set nodeLabels.fontName="Bitstream Charter";
+	set nodeLabels.fontSize=8;
+	set nodeLabels.fontStyle=0;
+	set nodeLabels.isShown=true;
+	set nodeLabels.significantDigits=4;
+	set nodeShapeExternal.colourAttribute=null;
+	set nodeShapeExternal.isShown=false;
+	set nodeShapeExternal.minSize=10.0;
+	set nodeShapeExternal.scaleType=Width;
+	set nodeShapeExternal.shapeType=Circle;
+	set nodeShapeExternal.size=4.0;
+	set nodeShapeExternal.sizeAttribute=null;
+	set nodeShapeInternal.colourAttribute=null;
+	set nodeShapeInternal.isShown=false;
+	set nodeShapeInternal.minSize=10.0;
+	set nodeShapeInternal.scaleType=Width;
+	set nodeShapeInternal.shapeType=Circle;
+	set nodeShapeInternal.size=4.0;
+	set nodeShapeInternal.sizeAttribute=null;
+	set polarLayout.alignTipLabels=false;
+	set polarLayout.angularRange=0;
+	set polarLayout.rootAngle=0;
+	set polarLayout.rootLength=100;
+	set polarLayout.showRoot=true;
+	set radialLayout.spread=0.0;
+	set rectilinearLayout.alignTipLabels=false;
+	set rectilinearLayout.curvature=0;
+	set rectilinearLayout.rootLength=100;
+	set scale.offsetAge=0.0;
+	set scale.rootAge=1.0;
+	set scale.scaleFactor=1.0;
+	set scale.scaleRoot=false;
+	set scaleAxis.automaticScale=true;
+	set scaleAxis.fontSize=8.0;
+	set scaleAxis.isShown=false;
+	set scaleAxis.lineWidth=1.0;
+	set scaleAxis.majorTicks=1.0;
+	set scaleAxis.minorTicks=0.5;
+	set scaleAxis.origin=0.0;
+	set scaleAxis.reverseAxis=false;
+	set scaleAxis.showGrid=true;
+	set scaleBar.automaticScale=true;
+	set scaleBar.fontSize=10.0;
+	set scaleBar.isShown=true;
+	set scaleBar.lineWidth=1.0;
+	set scaleBar.scaleRange=0.0;
+	set tipLabels.colorAttribute="User selection";
+	set tipLabels.displayAttribute="Names";
+	set tipLabels.fontName="Bitstream Charter";
+	set tipLabels.fontSize=8;
+	set tipLabels.fontStyle=0;
+	set tipLabels.isShown=true;
+	set tipLabels.significantDigits=4;
+	set trees.order=false;
+	set trees.orderType="increasing";
+	set trees.rooting=true;
+	set trees.rootingType="User Selection";
+	set trees.transform=false;
+	set trees.transformType="cladogram";
+end;
+
