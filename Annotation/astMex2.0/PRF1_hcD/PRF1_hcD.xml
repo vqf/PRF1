@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 16:36:22, Mon Feb 18, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			NC_035919.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				13028928
+			</_spliced_from>
+			<_spliced_to>
+				13029463
+			</_spliced_to>
+			<from>
+				13028928
+			</from>
+			<to>
+				13029461
+			</to>
+		</template>
+	</exon>
+	<exon>
+		<chromosome>
+			NC_035919.1
+		</chromosome>
+		<frame>
+			2
+		</frame>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				13029567
+			</_spliced_from>
+			<_spliced_to>
+				13030758
+			</_spliced_to>
+			<from>
+				13029565
+			</from>
+			<to>
+				13030758
+			</to>
+		</template>
+	</exon>
+</gene>

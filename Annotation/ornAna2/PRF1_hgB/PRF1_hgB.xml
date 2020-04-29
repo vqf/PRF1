@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 13:50:38, Wed Jan 23, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			chrUn_AAPN01441901v1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				4109
+			</_spliced_from>
+			<_spliced_to>
+				4647
+			</_spliced_to>
+			<from>
+				4109
+			</from>
+			<to>
+				4645
+			</to>
+		</template>
+	</exon>
+	<exon>
+		<chromosome>
+			chrUn_AAPN01441901v1
+		</chromosome>
+		<frame>
+			2
+		</frame>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				5728
+			</_spliced_from>
+			<_spliced_to>
+				6859
+			</_spliced_to>
+			<from>
+				5726
+			</from>
+			<to>
+				6859
+			</to>
+		</template>
+	</exon>
+</gene>

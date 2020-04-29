@@ -1,0 +1,1 @@
+Exon 1: just an exon_endTC cut by Ns

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 11:31:54, Fri Jan 25, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			NW_005842035.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				2114395
+			</_spliced_from>
+			<_spliced_to>
+				2114006
+			</_spliced_to>
+			<from>
+				2114395
+			</from>
+			<to>
+				2114006
+			</to>
+		</template>
+		<warnings>
+			framento exon2 con frameshift
+		</warnings>
+	</exon>
+</gene>

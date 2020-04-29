@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 17:11:40, Fri Jan 10, 2020 -->
+<gene>
+	<exon>
+		<chromosome>
+			LIAG020869409.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				248
+			</_spliced_from>
+			<_spliced_to>
+				628
+			</_spliced_to>
+			<from>
+				248
+			</from>
+			<to>
+				628
+			</to>
+		</template>
+		<warnings>
+			Query does not start at 1
+		</warnings>
+	</exon>
+	<exon>
+		<chromosome>
+			LIAG020869409.1
+		</chromosome>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				1736
+			</_spliced_from>
+			<_spliced_to>
+				2098
+			</_spliced_to>
+			<from>
+				1736
+			</from>
+			<to>
+				2098
+			</to>
+		</template>
+	</exon>
+</gene>

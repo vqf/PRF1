@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 17:4:18, Thu Jan 24, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			NW_015163112.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				553386
+			</_spliced_from>
+			<_spliced_to>
+				552836
+			</_spliced_to>
+			<from>
+				553386
+			</from>
+			<to>
+				552838
+			</to>
+		</template>
+	</exon>
+	<exon>
+		<chromosome>
+			NW_015163112.1
+		</chromosome>
+		<frame>
+			2
+		</frame>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				552160
+			</_spliced_from>
+			<_spliced_to>
+				551089
+			</_spliced_to>
+			<from>
+				552162
+			</from>
+			<to>
+				551089
+			</to>
+		</template>
+		<warnings>
+			no estoy seguro de este splicing
+		</warnings>
+	</exon>
+</gene>

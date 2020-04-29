@@ -1,0 +1,2 @@
+Exon 1: fragmento del exon1
+Exon 2: frameshift exon2

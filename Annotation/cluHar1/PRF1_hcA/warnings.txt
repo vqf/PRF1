@@ -1,0 +1,2 @@
+Exon 2: exon cut
+Exon 3: Lacking residues

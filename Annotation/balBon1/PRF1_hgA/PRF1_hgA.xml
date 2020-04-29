@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 19:4:35, Tue Feb 5, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			DF600860.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				13698
+			</_spliced_from>
+			<_spliced_to>
+				14236
+			</_spliced_to>
+			<from>
+				13698
+			</from>
+			<to>
+				14234
+			</to>
+		</template>
+	</exon>
+	<exon>
+		<chromosome>
+			DF600860.1
+		</chromosome>
+		<frame>
+			2
+		</frame>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				15166
+			</_spliced_from>
+			<_spliced_to>
+				16294
+			</_spliced_to>
+			<from>
+				15164
+			</from>
+			<to>
+				16294
+			</to>
+		</template>
+	</exon>
+</gene>

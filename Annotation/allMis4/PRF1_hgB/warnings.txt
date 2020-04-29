@@ -1,0 +1,2 @@
+Exon 1: parte del exon1
+Exon 2: exon2 frmaeshift

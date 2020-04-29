@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 12:0:33, Thu Jan 24, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			JH570374
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				7993189
+			</_spliced_from>
+			<_spliced_to>
+				7992651
+			</_spliced_to>
+			<from>
+				7993189
+			</from>
+			<to>
+				7992650
+			</to>
+		</template>
+		<warnings>
+			no estoy seguro de este sitio de splicing
+		</warnings>
+	</exon>
+	<exon>
+		<chromosome>
+			JH570374
+		</chromosome>
+		<frame>
+			-1
+		</frame>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				7991473
+			</_spliced_from>
+			<_spliced_to>
+				7990387
+			</_spliced_to>
+			<from>
+				7991472
+			</from>
+			<to>
+				7990387
+			</to>
+		</template>
+		<warnings>
+			sitio criptico de splicing conservado por lo que es raro que haya cambiado a este
+		</warnings>
+	</exon>
+</gene>

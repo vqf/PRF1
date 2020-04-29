@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 10:17:9, Wed Feb 6, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			QMGA01000190.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				5757681
+			</_spliced_from>
+			<_spliced_to>
+				5757331
+			</_spliced_to>
+			<from>
+				5757681
+			</from>
+			<to>
+				5757331
+			</to>
+		</template>
+		<warnings>
+			frameshift
+		</warnings>
+	</exon>
+	<exon>
+		<chromosome>
+			QMGA01000190.1
+		</chromosome>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				5756916
+			</_spliced_from>
+			<_spliced_to>
+				5756437
+			</_spliced_to>
+			<from>
+				5756916
+			</from>
+			<to>
+				5756437
+			</to>
+		</template>
+		<warnings>
+			frameshift
+		</warnings>
+	</exon>
+</gene>

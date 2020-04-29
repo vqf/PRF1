@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 10:30:10, Thu Jan 24, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			scaffold00048
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				129919
+			</_spliced_from>
+			<_spliced_to>
+				130457
+			</_spliced_to>
+			<from>
+				129919
+			</from>
+			<to>
+				130455
+			</to>
+		</template>
+	</exon>
+	<exon>
+		<chromosome>
+			scaffold00048
+		</chromosome>
+		<frame>
+			2
+		</frame>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				131839
+			</_spliced_from>
+			<_spliced_to>
+				132964
+			</_spliced_to>
+			<from>
+				131837
+			</from>
+			<to>
+				132964
+			</to>
+		</template>
+	</exon>
+</gene>

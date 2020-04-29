@@ -1,0 +1,2 @@
+Exon 1: Query does not start at 1
+Exon 2: Lacking residues

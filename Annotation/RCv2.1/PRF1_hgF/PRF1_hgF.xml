@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 13:38:44, Fri Jan 10, 2020 -->
+<gene>
+	<exon>
+		<chromosome>
+			LIAG021249999.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				376
+			</_spliced_from>
+			<_spliced_to>
+				924
+			</_spliced_to>
+			<from>
+				376
+			</from>
+			<to>
+				924
+			</to>
+		</template>
+		<warnings>
+			exon 3 
+		</warnings>
+	</exon>
+</gene>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 13:51:34, Wed Jan 23, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			chrUn_DS193418v1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				6880
+			</_spliced_from>
+			<_spliced_to>
+				6546
+			</_spliced_to>
+			<from>
+				6880
+			</from>
+			<to>
+				6548
+			</to>
+		</template>
+	</exon>
+	<exon>
+		<chromosome>
+			chrUn_DS193418v1
+		</chromosome>
+		<frame>
+			2
+		</frame>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				5168
+			</_spliced_from>
+			<_spliced_to>
+				4082
+			</_spliced_to>
+			<from>
+				5170
+			</from>
+			<to>
+				4082
+			</to>
+		</template>
+	</exon>
+</gene>

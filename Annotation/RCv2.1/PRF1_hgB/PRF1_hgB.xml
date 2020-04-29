@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 12:44:57, Fri Jan 10, 2020 -->
+<gene>
+	<exon>
+		<chromosome>
+			LIAG020680438.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				5474
+			</_spliced_from>
+			<_spliced_to>
+				5106
+			</_spliced_to>
+			<from>
+				5474
+			</from>
+			<to>
+				5106
+			</to>
+		</template>
+		<warnings>
+			lacking exon 1
+		</warnings>
+	</exon>
+	<exon>
+		<chromosome>
+			LIAG020680438.1
+		</chromosome>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				3828
+			</_spliced_from>
+			<_spliced_to>
+				3109
+			</_spliced_to>
+			<from>
+				3828
+			</from>
+			<to>
+				3109
+			</to>
+		</template>
+	</exon>
+</gene>

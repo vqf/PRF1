@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 12:3:33, Mon Feb 11, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			NW_010771363.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				557
+			</_spliced_from>
+			<_spliced_to>
+				294
+			</_spliced_to>
+			<from>
+				557
+			</from>
+			<to>
+				294
+			</to>
+		</template>
+	</exon>
+</gene>

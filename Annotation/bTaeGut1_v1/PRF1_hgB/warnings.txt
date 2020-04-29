@@ -1,0 +1,3 @@
+Exon 1: gc-ag splicing
+Exon 2: gc-ag splicing
+Exon 3: weird splicing

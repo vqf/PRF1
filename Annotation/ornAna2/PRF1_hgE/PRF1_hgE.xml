@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 14:2:35, Wed Jan 23, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			chrUn_DS183658v1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				30449
+			</_spliced_from>
+			<_spliced_to>
+				29700
+			</_spliced_to>
+			<from>
+				30449
+			</from>
+			<to>
+				29700
+			</to>
+		</template>
+		<warnings>
+			parte del exon2 con framshifts
+		</warnings>
+	</exon>
+</gene>

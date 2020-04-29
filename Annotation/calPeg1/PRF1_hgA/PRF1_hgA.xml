@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 14:18:2, Mon Feb 11, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			NW_015091424.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				16274
+			</_spliced_from>
+			<_spliced_to>
+				15946
+			</_spliced_to>
+			<from>
+				16274
+			</from>
+			<to>
+				15948
+			</to>
+		</template>
+		<warnings>
+			Query does not start at 1
+		</warnings>
+	</exon>
+	<exon>
+		<chromosome>
+			NW_015091424.1
+		</chromosome>
+		<frame>
+			2
+		</frame>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				12977
+			</_spliced_from>
+			<_spliced_to>
+				12340
+			</_spliced_to>
+			<from>
+				12979
+			</from>
+			<to>
+				12341
+			</to>
+		</template>
+		<warnings>
+			region con Ns, imposible estudiar e splicing
+		</warnings>
+	</exon>
+	<exon>
+		<chromosome>
+			NW_015091424.1
+		</chromosome>
+		<frame>
+			1
+		</frame>
+		<number>
+			3
+		</number>
+		<template>
+			<_spliced_from>
+				11906
+			</_spliced_from>
+			<_spliced_to>
+				11539
+			</_spliced_to>
+			<from>
+				11907
+			</from>
+			<to>
+				11539
+			</to>
+		</template>
+		<warnings>
+			Lacking residues
+		</warnings>
+	</exon>
+</gene>

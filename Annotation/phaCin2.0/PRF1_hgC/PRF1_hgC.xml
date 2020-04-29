@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 18:31:6, Tue Feb 5, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			FUWB01009806.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				21592
+			</_spliced_from>
+			<_spliced_to>
+				21932
+			</_spliced_to>
+			<from>
+				21592
+			</from>
+			<to>
+				21933
+			</to>
+		</template>
+		<warnings>
+			frameshift
+		</warnings>
+	</exon>
+	<exon>
+		<chromosome>
+			FUWB01009806.1
+		</chromosome>
+		<frame>
+			-1
+		</frame>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				23234
+			</_spliced_from>
+			<_spliced_to>
+				23612
+			</_spliced_to>
+			<from>
+				23235
+			</from>
+			<to>
+				23612
+			</to>
+		</template>
+		<warnings>
+			Lacking residues
+		</warnings>
+	</exon>
+</gene>

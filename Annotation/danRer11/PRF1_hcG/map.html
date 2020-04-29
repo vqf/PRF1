@@ -1,0 +1,860 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <title>PRF1_hcG</title>
+  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<script language="JavaScript" type="text/javascript">
+/*<![CDATA[*/
+  function toggleIntron(intron){
+    var n = document.getElementById(intron);
+    if (n.className == "hidden"){
+      n.className = "intron_collapse";
+      var t = "toggle_" + intron;
+      var toggle = document.getElementById(t);
+      toggle.className = "hidden";
+    }
+    else{
+      n.className = "hidden";
+      var t = "toggle_" + intron;
+      var toggle = document.getElementById(t);
+      toggle.className = "intron_collapse";
+    }
+  }
+  function showAll(){
+    var dvs = document.getElementsByTagName('div');
+    for (var i = 0; i < dvs.length; i++){
+      if (mleft(dvs[i].id, 5) == 'iExon'){
+        dvs[i].className = "intron_collapse";
+        var t = "toggle_" + dvs[i].id;
+        var toggle = document.getElementById(t);
+        toggle.className = "hidden";
+      }
+    }
+  }
+  function hideAll(){
+    var dvs = document.getElementsByTagName('div');
+    for (var i = 0; i < dvs.length; i++){
+      if (mleft(dvs[i].id, 5) == 'iExon'){
+        dvs[i].className = "hidden";
+        var t = "toggle_" + dvs[i].id;
+        var toggle = document.getElementById(t);
+        toggle.className = "intron_collapse";
+      }
+    }
+  }
+  function mleft(str, n){
+	if (n <= 0)
+	    return "";
+	else if (n > String(str).length)
+	    return str;
+	else
+	    return String(str).substring(0,n);
+}
+
+/*]]>*/
+</script>
+<style type="text/css">
+  /*<![CDATA[*/
+  a{
+    cursor: pointer;
+  }
+  .text{
+    font-family: Courier New;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    position: relative;
+    float: left;
+    text-indent: 0;
+  }
+  .exon{
+    background-color: #CbCbCb;
+    border: thin solid
+  }
+  .frame{
+    background-color: #ffffa5;
+    border: thin dotted;
+  }
+  .warning{
+    font-family: Arial Narrow;
+    background-color: #FAD2D2;
+  	float: right;
+    margin-left: 1em;
+    border: thin outset;
+  }
+  .genome{
+    font-weight: bold;
+  }
+  .rev{
+    margin-bottom: 0.4em;
+  }
+  .transl{
+  }
+  .f3{
+    margin-bottom: 1em;
+  }
+  .hidden{
+    display: none;
+  }
+  .intron_collapse{
+    cursor: pointer;
+  }
+  #header{
+  	margin: 2em;
+  	padding: 2em;
+  }
+  #map{
+  	margin: 2em;
+  	font-size: small;
+  	padding:0;
+  	width:90%;
+  }
+  /*]]>*/
+</style>
+</head>
+<body>
+  <div id="header">
+    <span class="title"><h1>Genomic map of PRF1_hcG</h1><h2>Chromosome NW_018394534.1 (+ strand)</h2> Last updated: 18:5:3, Wed Dec 11, 2019
+<br /><br /><a href="#Exon1">Exon 1</a><br />
+<a href="#Exon2">Exon 2</a><br />
+<a href="#Exon3">Exon 3</a><br />
+<a href="#Exon4">Exon 4</a><br />
+<a onclick="hideAll()">Hide long introns</a><br />
+<a onclick="showAll()">Show long introns</a><br />
+</span>
+  </div>
+  <div id="map">
+	  <div class="text">
+	    <div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CTAGTTGTCAGTGGGTTTAAAAAGGTTAAAACTCAAAATGCCTTGTTTTTTCACAGGAAA</div>
+<div class="sep">54609&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GATCAACAGTCACCCAAATTTTTCCAATTTTGAGTTTTACGGAACAAAAAAGTGTCCTTT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;G&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;M&nbsp;&nbsp;P&nbsp;&nbsp;C&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;T&nbsp;&nbsp;G&nbsp;&nbsp;K&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;Q&nbsp;&nbsp;W&nbsp;&nbsp;V&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;G&nbsp;&nbsp;*&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;Q&nbsp;&nbsp;E&nbsp;&nbsp;R</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;G&nbsp;&nbsp;F&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;Q&nbsp;&nbsp;N&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;H&nbsp;&nbsp;R&nbsp;&nbsp;K&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GAAGAGCATCCATACACATTTCCTCCACTCATTGACAGAG<span class="exon" id="Exon1">ATGAGGGCTGGATTGTTTTT</span></div>
+<div class="sep">54669&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CTTCTCGTAGGTATGTGTAAAGGAGGTGAGTAACTGTCTCTACTCCCGACCTAACAAAAA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;H&nbsp;&nbsp;T&nbsp;&nbsp;H&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;E&nbsp;&nbsp;<span class="frame">M&nbsp;&nbsp;R&nbsp;&nbsp;A&nbsp;&nbsp;G&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;H&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;H&nbsp;&nbsp;*&nbsp;&nbsp;Q&nbsp;&nbsp;R&nbsp;&nbsp;*&nbsp;&nbsp;G&nbsp;&nbsp;L&nbsp;&nbsp;D&nbsp;&nbsp;C&nbsp;&nbsp;F&nbsp;&nbsp;F</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;E&nbsp;&nbsp;H&nbsp;&nbsp;P&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;D&nbsp;&nbsp;R&nbsp;&nbsp;D&nbsp;&nbsp;E&nbsp;&nbsp;G&nbsp;&nbsp;W&nbsp;&nbsp;I&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">TTACCTTCTCTTGCCTGTTGTGCAGTCCTGCACTAAAGGTAAACCCAAAGAGTGTGAAGA</span></div>
+<div class="sep">54729&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AATGGAAGAGAACGGACAACACGTCAGGACGTGATTTCCATTTGGGTTTCTCACACTTCT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;Y&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;V&nbsp;&nbsp;V&nbsp;&nbsp;Q&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;T&nbsp;&nbsp;K&nbsp;&nbsp;G&nbsp;&nbsp;K&nbsp;&nbsp;P&nbsp;&nbsp;K&nbsp;&nbsp;E&nbsp;&nbsp;C&nbsp;&nbsp;E&nbsp;&nbsp;E&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;C&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;N&nbsp;&nbsp;P&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;K</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;C&nbsp;&nbsp;C&nbsp;&nbsp;A&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;*&nbsp;&nbsp;R&nbsp;&nbsp;*&nbsp;&nbsp;T&nbsp;&nbsp;Q&nbsp;&nbsp;R&nbsp;&nbsp;V&nbsp;&nbsp;*&nbsp;&nbsp;R&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">AGCAACCTTTGCACCCGGATCTAACCTGGCCGGAGAAGGATACGACGTGATCAAGATGCA</span></div>
+<div class="sep">54789&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TCGTTGGAAACGTGGGCCTAGATTGGACCGGCCTCTTCCTATGCTGCACTAGTTCTACGT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;A&nbsp;&nbsp;T&nbsp;&nbsp;F&nbsp;&nbsp;A&nbsp;&nbsp;P&nbsp;&nbsp;G&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;G&nbsp;&nbsp;E&nbsp;&nbsp;G&nbsp;&nbsp;Y&nbsp;&nbsp;D&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;M&nbsp;&nbsp;Q&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;P&nbsp;&nbsp;D&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;W&nbsp;&nbsp;P&nbsp;&nbsp;E&nbsp;&nbsp;K&nbsp;&nbsp;D&nbsp;&nbsp;T&nbsp;&nbsp;T&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;C&nbsp;&nbsp;S</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;C&nbsp;&nbsp;T&nbsp;&nbsp;R&nbsp;&nbsp;I&nbsp;&nbsp;*&nbsp;&nbsp;P&nbsp;&nbsp;G&nbsp;&nbsp;R&nbsp;&nbsp;R&nbsp;&nbsp;R&nbsp;&nbsp;I&nbsp;&nbsp;R&nbsp;&nbsp;R&nbsp;&nbsp;D&nbsp;&nbsp;Q&nbsp;&nbsp;D&nbsp;&nbsp;A&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">GCGCAAGGGAGCTTTTGTCATCAACACAGACGTCTGGAGGCAAAAGGACAAATCCTGCAC</span></div>
+<div class="sep">54849&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CGCGTTCCCTCGAAAACAGTAGTTGTGTCTGCAGACCTCCGTTTTCCTGTTTAGGACGTG</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;R&nbsp;&nbsp;K&nbsp;&nbsp;G&nbsp;&nbsp;A&nbsp;&nbsp;F&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;N&nbsp;&nbsp;T&nbsp;&nbsp;D&nbsp;&nbsp;V&nbsp;&nbsp;W&nbsp;&nbsp;R&nbsp;&nbsp;Q&nbsp;&nbsp;K&nbsp;&nbsp;D&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;T&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;E&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;G&nbsp;&nbsp;G&nbsp;&nbsp;K&nbsp;&nbsp;R&nbsp;&nbsp;T&nbsp;&nbsp;N&nbsp;&nbsp;P&nbsp;&nbsp;A&nbsp;&nbsp;P</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;Q&nbsp;&nbsp;G&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;C&nbsp;&nbsp;H&nbsp;&nbsp;Q&nbsp;&nbsp;H&nbsp;&nbsp;R&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;G&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">CCTCTGCAAGAACCCCTATATGGACGGAGCTTTACAAAAGCTTCCTCTGTCAGTGGTGGA</span></div>
+<div class="sep">54909&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GGAGACGTTCTTGGGGATATACCTGCCTCGAAATGTTTTCGAAGGAGACAGTCACCACCT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;L&nbsp;&nbsp;C&nbsp;&nbsp;K&nbsp;&nbsp;N&nbsp;&nbsp;P&nbsp;&nbsp;Y&nbsp;&nbsp;M&nbsp;&nbsp;D&nbsp;&nbsp;G&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;V&nbsp;&nbsp;D&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;T&nbsp;&nbsp;P&nbsp;&nbsp;I&nbsp;&nbsp;W&nbsp;&nbsp;T&nbsp;&nbsp;E&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;C&nbsp;&nbsp;Q&nbsp;&nbsp;W&nbsp;&nbsp;W&nbsp;&nbsp;T</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;E&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;G&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;T&nbsp;&nbsp;K&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;G&nbsp;&nbsp;G&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">CTGGAGAACCAGCCAAAAATGCACCGTGAAAGTCTCCAGTTCTCTATACCATTCCAGCGA</span></div>
+<div class="sep">54969&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GACCTCTTGGTCGGTTTTTACGTGGCACTTTCAGAGGTCAAGAGATATGGTAAGGTCGCT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;W&nbsp;&nbsp;R&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;Q&nbsp;&nbsp;K&nbsp;&nbsp;C&nbsp;&nbsp;T&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;H&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;E&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G&nbsp;&nbsp;E&nbsp;&nbsp;P&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;N&nbsp;&nbsp;A&nbsp;&nbsp;P&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;P&nbsp;&nbsp;A&nbsp;&nbsp;R</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;N&nbsp;&nbsp;Q&nbsp;&nbsp;P&nbsp;&nbsp;K&nbsp;&nbsp;M&nbsp;&nbsp;H&nbsp;&nbsp;R&nbsp;&nbsp;E&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;P&nbsp;&nbsp;F&nbsp;&nbsp;Q&nbsp;&nbsp;R&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">GGACCTGGTGAGCTCCAGCGCCTCCTCTATTGAGAACAACTGGGGTGCAAGTTTGGGGAT</span></div>
+<div class="sep">55029&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CCTGGACCACTCGAGGTCGCGGAGGAGATAACTCTTGTTGACCCCACGTTCAAACCCCTA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;D&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;E&nbsp;&nbsp;N&nbsp;&nbsp;N&nbsp;&nbsp;W&nbsp;&nbsp;G&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;I&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;W&nbsp;&nbsp;*&nbsp;&nbsp;A&nbsp;&nbsp;P&nbsp;&nbsp;A&nbsp;&nbsp;P&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;T&nbsp;&nbsp;T&nbsp;&nbsp;G&nbsp;&nbsp;V&nbsp;&nbsp;Q&nbsp;&nbsp;V&nbsp;&nbsp;W&nbsp;&nbsp;G&nbsp;&nbsp;*</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G&nbsp;&nbsp;P&nbsp;&nbsp;G&nbsp;&nbsp;E&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;*&nbsp;&nbsp;E&nbsp;&nbsp;Q&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;C&nbsp;&nbsp;K&nbsp;&nbsp;F&nbsp;&nbsp;G&nbsp;&nbsp;D&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">AGAGGCTAAAAAAACAACAGGCTCGATAGTTTTGGCAGGAAGCAAGTCAAAGCTTGCAGA</span></div>
+<div class="sep">55089&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TCTCCGATTTTTTTGTTGTCCGAGCTATCAAAACCGTCCTTCGTTCAGTTTCGAACGTCT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;E&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;T&nbsp;&nbsp;G&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;G&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;E&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;Q&nbsp;&nbsp;Q&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;W&nbsp;&nbsp;Q&nbsp;&nbsp;E&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;Q&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;S</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;G&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;N&nbsp;&nbsp;N&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;D&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;G&nbsp;&nbsp;R&nbsp;&nbsp;K&nbsp;&nbsp;Q&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;A&nbsp;&nbsp;C&nbsp;&nbsp;R&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">GTACTCAATGGAGAAGACCAAAAAAGACAAGTTCAACTTTGCAAGTCAAAGTATTTCCTG</span></div>
+<div class="sep">55149&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CATGAGTTACCTCTTCTGGTTTTTTCTGTTCAAGTTGAAACGTTCAGTTTCATAAAGGAC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;Y&nbsp;&nbsp;S&nbsp;&nbsp;M&nbsp;&nbsp;E&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;D&nbsp;&nbsp;K&nbsp;&nbsp;F&nbsp;&nbsp;N&nbsp;&nbsp;F&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;Q&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;Q&nbsp;&nbsp;W&nbsp;&nbsp;R&nbsp;&nbsp;R&nbsp;&nbsp;P&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;V</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;G&nbsp;&nbsp;E&nbsp;&nbsp;D&nbsp;&nbsp;Q&nbsp;&nbsp;K&nbsp;&nbsp;R&nbsp;&nbsp;Q&nbsp;&nbsp;V&nbsp;&nbsp;Q&nbsp;&nbsp;L&nbsp;&nbsp;C&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;Y&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">TGCTTATTACAG</span>GTGGGATTCTTGTCTAATAGTACTGCATACACTTCTACTTTCCAAAGT</div>
+<div class="sep">55209&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACGAATAATGTCCACCCTAAGAACAGATTATCATGACGTATGTGAAGATGAAAGGTTTCA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;A&nbsp;&nbsp;Y&nbsp;&nbsp;Y&nbsp;&nbsp;R&nbsp;</span>&nbsp;W&nbsp;&nbsp;D&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;G&nbsp;&nbsp;G&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;Y&nbsp;&nbsp;C&nbsp;&nbsp;I&nbsp;&nbsp;H&nbsp;&nbsp;F&nbsp;&nbsp;Y&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;K&nbsp;&nbsp;S</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;V&nbsp;&nbsp;G&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;A&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;F&nbsp;&nbsp;Q&nbsp;&nbsp;S&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CACCCCCCCGCCACTCAAATTAGTTTAAGAGCGAAGTGAAGCGAGTGAGcgagtgaagtt</div>
+<div class="sep">55269&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GTGGGGGGGCGGTGAGTTTAATCAAATTCTCGCTTCACTTCGCTCACTCGCTCACTTCAA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;P&nbsp;&nbsp;P&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;*&nbsp;&nbsp;E&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;E&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;E&nbsp;&nbsp;R&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;F&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P&nbsp;&nbsp;P&nbsp;&nbsp;R&nbsp;&nbsp;H&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;E&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;R&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;E&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;F</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;P&nbsp;&nbsp;P&nbsp;&nbsp;A&nbsp;&nbsp;T&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;E&nbsp;&nbsp;*&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;E&nbsp;&nbsp;V&nbsp;&nbsp;</div>
+<div class="hidden" id="toggle_iExon1" onclick="toggleIntron('iExon1')" title="Show intron"><hr /></div><div class="intron_collapse" id="iExon1" onclick="toggleIntron('iExon1')" title="Hide intron"><div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ttacaaacaaaGTTTGAGaagagcacatgatatgattgatcatggctggcctctcatccg</div>
+<div class="sep">55329&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AATGTTTGTTTCAAACTCTTCTCGTGTACTATACTAACTAGTACCGACCGGAGAGTAGGC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Y&nbsp;&nbsp;K&nbsp;&nbsp;Q&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;R&nbsp;&nbsp;A&nbsp;&nbsp;H&nbsp;&nbsp;D&nbsp;&nbsp;M&nbsp;&nbsp;I&nbsp;&nbsp;D&nbsp;&nbsp;H&nbsp;&nbsp;G&nbsp;&nbsp;W&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;R&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;N&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;*&nbsp;&nbsp;E&nbsp;&nbsp;E&nbsp;&nbsp;H&nbsp;&nbsp;M&nbsp;&nbsp;I&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;M&nbsp;&nbsp;A&nbsp;&nbsp;G&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;V</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;K&nbsp;&nbsp;F&nbsp;&nbsp;E&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;*&nbsp;&nbsp;Y&nbsp;&nbsp;D&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;W&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;H&nbsp;&nbsp;P&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;taatcagcaataatccaatcagattgattcaagcttacaataaatagacAGATTGCCCTG</div>
+<div class="sep">55389&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ATTAGTCGTTATTAGGTTAGTCTAACTAAGTTCGAATGTTATTTATCTGTCTAACGGGAC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;Q&nbsp;&nbsp;Q&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;D&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;*&nbsp;&nbsp;I&nbsp;&nbsp;D&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;C&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;N&nbsp;&nbsp;P&nbsp;&nbsp;I&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;Q&nbsp;&nbsp;A&nbsp;&nbsp;Y&nbsp;&nbsp;N&nbsp;&nbsp;K&nbsp;&nbsp;*&nbsp;&nbsp;T&nbsp;&nbsp;D&nbsp;&nbsp;C&nbsp;&nbsp;P&nbsp;&nbsp;A</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;Q&nbsp;&nbsp;S&nbsp;&nbsp;D&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;N&nbsp;&nbsp;R&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CTGACTTATCTTTATATTGGAAGAATCCCCGTctccaccccatctcccctttTTCTCCCT</div>
+<div class="sep">55449&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GACTGAATAGAAATATAACCTTCTTAGGGGCAGAGGTGGGGTAGAGGGGAAAAAGAGGGA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;E&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;P&nbsp;&nbsp;H&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;W&nbsp;&nbsp;K&nbsp;&nbsp;N&nbsp;&nbsp;P&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;P&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;F</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;Y&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;G&nbsp;&nbsp;R&nbsp;&nbsp;I&nbsp;&nbsp;P&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;P&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTACCAGGggaagctctcgagacctacatAATCTCGGATCCCCTTTactgaccaggcggg</div>
+<div class="sep">55509&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AATGGTCCCCTTCGAGAGCTCTGGATGTATTAGAGCCTAGGGGAAATGACTGGTCCGCCC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Y&nbsp;&nbsp;Q&nbsp;&nbsp;G&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;P&nbsp;&nbsp;T&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;I&nbsp;&nbsp;P&nbsp;&nbsp;F&nbsp;&nbsp;T&nbsp;&nbsp;D&nbsp;&nbsp;Q&nbsp;&nbsp;A&nbsp;&nbsp;G&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;R&nbsp;&nbsp;G&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;D&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;R&nbsp;&nbsp;R&nbsp;&nbsp;E</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;G&nbsp;&nbsp;E&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;T&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;D&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;*&nbsp;&nbsp;P&nbsp;&nbsp;G&nbsp;&nbsp;G&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;agccctgggctcaattatctcagagctcagggttctcaggacagcatgctaaacccGCTA</div>
+<div class="sep">55569&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TCGGGACCCGAGTTAATAGAGTCTCGAGTCCCAAGAGTCCTGTCGTACGATTTGGGCGAT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;E&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;T&nbsp;&nbsp;A&nbsp;&nbsp;C&nbsp;&nbsp;*&nbsp;&nbsp;T&nbsp;&nbsp;R&nbsp;&nbsp;*&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P&nbsp;&nbsp;W&nbsp;&nbsp;A&nbsp;&nbsp;Q&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;Q&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;G&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;G&nbsp;&nbsp;Q&nbsp;&nbsp;H&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;P&nbsp;&nbsp;A&nbsp;&nbsp;N</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;G&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;Y&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;A&nbsp;&nbsp;Q&nbsp;&nbsp;G&nbsp;&nbsp;S&nbsp;&nbsp;Q&nbsp;&nbsp;D&nbsp;&nbsp;S&nbsp;&nbsp;M&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ATAGCGTCAATCAatatttaagtgtgaactcttaaaacttATTCAGTGATTTTTACAAGA</div>
+<div class="sep">55629&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TATCGCAGTTAGTTATAAATTCACACTTGAGAATTTTGAATAAGTCACTAAAAATGTTCT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;R&nbsp;&nbsp;Q&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;K&nbsp;&nbsp;C&nbsp;&nbsp;E&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;Q&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;D&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;N&nbsp;&nbsp;Q&nbsp;&nbsp;Y&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;*&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;D&nbsp;&nbsp;F&nbsp;&nbsp;Y&nbsp;&nbsp;K&nbsp;&nbsp;I</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;N&nbsp;&nbsp;I&nbsp;&nbsp;*&nbsp;&nbsp;V&nbsp;&nbsp;*&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;Y&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;T&nbsp;&nbsp;R&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTGTACATTTCCTTGTAAACTGGATAAGAATTATTTTGTACACAATTTGTAATGAACAAT</div>
+<div class="sep">55689&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AACATGTAAAGGAACATTTGACCTATTCTTAATAAAACATGTGTTAAACATTACTTGTTA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C&nbsp;&nbsp;T&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;C&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;D&nbsp;&nbsp;K&nbsp;&nbsp;N&nbsp;&nbsp;Y&nbsp;&nbsp;F&nbsp;&nbsp;V&nbsp;&nbsp;H&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V&nbsp;&nbsp;H&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;N&nbsp;&nbsp;W&nbsp;&nbsp;I&nbsp;&nbsp;R&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;C&nbsp;&nbsp;N&nbsp;&nbsp;E&nbsp;&nbsp;Q&nbsp;&nbsp;*</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;T&nbsp;&nbsp;G&nbsp;&nbsp;*&nbsp;&nbsp;E&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;C&nbsp;&nbsp;T&nbsp;&nbsp;Q&nbsp;&nbsp;F&nbsp;&nbsp;V&nbsp;&nbsp;M&nbsp;&nbsp;N&nbsp;&nbsp;N&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AAATCAAGTAACTGCAATTTGccaaactgactttaattaaCTGTTTGAAATCATAAATAT</div>
+<div class="sep">55749&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTTAGTTCATTGACGTTAAACGGTTTGACTGAAATTAATTGACAAACTTTAGTATTTATA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;Q&nbsp;&nbsp;V&nbsp;&nbsp;T&nbsp;&nbsp;A&nbsp;&nbsp;I&nbsp;&nbsp;C&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;D&nbsp;&nbsp;F&nbsp;&nbsp;N&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;E&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;N&nbsp;&nbsp;M&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;F&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;N&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;*&nbsp;&nbsp;I&nbsp;&nbsp;C</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;C&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;N&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;V&nbsp;&nbsp;*&nbsp;&nbsp;N&nbsp;&nbsp;H&nbsp;&nbsp;K&nbsp;&nbsp;Y&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GTTAAtttatacacaatattaattttaataattttaataactagcTTTCAATAACTCATT</div>
+<div class="sep">55809&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CAATTAAATATGTGTTATAATTAAAATTATTAAAATTATTGATCGAAAGTTATTGAGTAA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;Q&nbsp;&nbsp;Y&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;F&nbsp;&nbsp;N&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;H&nbsp;&nbsp;N&nbsp;&nbsp;I&nbsp;&nbsp;N&nbsp;&nbsp;F&nbsp;&nbsp;N&nbsp;&nbsp;N&nbsp;&nbsp;F&nbsp;&nbsp;N&nbsp;&nbsp;N&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;H&nbsp;&nbsp;L</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;Q&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TGCAACGGGGAGCATGCATGAAAcatttctgaatgaaagtgaaagtgccaaactgcagtt</div>
+<div class="sep">55869&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACGTTGCCCCTCGTACGTACTTTGTAAAGACTTACTTTCACTTTCACGGTTTGACGTCAA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;T&nbsp;&nbsp;G&nbsp;&nbsp;S&nbsp;&nbsp;M&nbsp;&nbsp;H&nbsp;&nbsp;E&nbsp;&nbsp;T&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;E&nbsp;&nbsp;S&nbsp;&nbsp;E&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;L&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q&nbsp;&nbsp;R&nbsp;&nbsp;G&nbsp;&nbsp;A&nbsp;&nbsp;C&nbsp;&nbsp;M&nbsp;&nbsp;K&nbsp;&nbsp;H&nbsp;&nbsp;F&nbsp;&nbsp;*&nbsp;&nbsp;M&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;P&nbsp;&nbsp;N&nbsp;&nbsp;C&nbsp;&nbsp;S&nbsp;&nbsp;*</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C&nbsp;&nbsp;N&nbsp;&nbsp;G&nbsp;&nbsp;E&nbsp;&nbsp;H&nbsp;&nbsp;A&nbsp;&nbsp;*&nbsp;&nbsp;N&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;E&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;C&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;A&nbsp;&nbsp;V&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aaagtcggcaaactaaaactgaaacacctgaaatttcaTGAAACTCTAGAAGAAATGTGC</div>
+<div class="sep">55929&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTTCAGCCGTTTGATTTTGACTTTGTGGACTTTAAAGTACTTTGAGATCTTCTTTACACG</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;N&nbsp;&nbsp;*&nbsp;&nbsp;N&nbsp;&nbsp;*&nbsp;&nbsp;N&nbsp;&nbsp;T&nbsp;&nbsp;*&nbsp;&nbsp;N&nbsp;&nbsp;F&nbsp;&nbsp;M&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;C&nbsp;&nbsp;A&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;E&nbsp;&nbsp;T&nbsp;&nbsp;P&nbsp;&nbsp;E&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;*&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;R&nbsp;&nbsp;N&nbsp;&nbsp;V&nbsp;&nbsp;P</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;G&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;H&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;F&nbsp;&nbsp;H&nbsp;&nbsp;E&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;E&nbsp;&nbsp;M&nbsp;&nbsp;C&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CAAACTCCGATAAGCAAAATCAATTTCAGGCGGGGCTGACAGGACGTCTTTCATGGTAAT</div>
+<div class="sep">55989&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GTTTGAGGCTATTCGTTTTAGTTAAAGTCCGCCCCGACTGTCCTGCAGAAAGTACCATTA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;*&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;G&nbsp;&nbsp;G&nbsp;&nbsp;A&nbsp;&nbsp;D&nbsp;&nbsp;R&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;M&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;D&nbsp;&nbsp;K&nbsp;&nbsp;Q&nbsp;&nbsp;N&nbsp;&nbsp;Q&nbsp;&nbsp;F&nbsp;&nbsp;Q&nbsp;&nbsp;A&nbsp;&nbsp;G&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;G&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;W&nbsp;&nbsp;*&nbsp;&nbsp;*</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;P&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;N&nbsp;&nbsp;F&nbsp;&nbsp;R&nbsp;&nbsp;R&nbsp;&nbsp;G&nbsp;&nbsp;*&nbsp;&nbsp;Q&nbsp;&nbsp;D&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;H&nbsp;&nbsp;G&nbsp;&nbsp;N&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AAAGAAAAAGTCTTTCATGAATTCTCTTGGATTTCTAACCTCAATCCCCTCTGGGGCCGA</div>
+<div class="sep">56049&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTTCTTTTTCAGAAAGTACTTAAGAGAACCTAAAGATTGGAGTTAGGGGAGACCCCGGCT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;M&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;P&nbsp;&nbsp;S&nbsp;&nbsp;G&nbsp;&nbsp;A&nbsp;&nbsp;D&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;*&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;D&nbsp;&nbsp;F&nbsp;&nbsp;*&nbsp;&nbsp;P&nbsp;&nbsp;Q&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;P&nbsp;&nbsp;T</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K&nbsp;&nbsp;E&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;H&nbsp;&nbsp;E&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;W&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;W&nbsp;&nbsp;G&nbsp;&nbsp;R&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CCACTCGTAGATTCTGTCCCTTCAATCGAGAGACCAAATCATCAACAGCAGACCCCAACG</div>
+<div class="sep">56109&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GGTGAGCATCTAAGACAGGGAAGTTAGCTCTCTGGTTTAGTAGTTGTCGTCTGGGGTTGC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;S&nbsp;&nbsp;*&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;D&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;P&nbsp;&nbsp;Q&nbsp;&nbsp;R&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;R&nbsp;&nbsp;R&nbsp;&nbsp;F&nbsp;&nbsp;C&nbsp;&nbsp;P&nbsp;&nbsp;F&nbsp;&nbsp;N&nbsp;&nbsp;R&nbsp;&nbsp;E&nbsp;&nbsp;T&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;A&nbsp;&nbsp;D&nbsp;&nbsp;P&nbsp;&nbsp;N&nbsp;&nbsp;V</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;D&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;P&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;E&nbsp;&nbsp;R&nbsp;&nbsp;P&nbsp;&nbsp;N&nbsp;&nbsp;H&nbsp;&nbsp;Q&nbsp;&nbsp;Q&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;P&nbsp;&nbsp;T&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TAGCATTTAAATCCGAAGCCGCTGTTAATTCGGCTCATAACGAAGTAACTTTGTGCCATA</div>
+<div class="sep">56169&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ATCGTAAATTTAGGCTTCGGCGACAATTAAGCCGAGTATTGCTTCATTGAAACACGGTAT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;*&nbsp;&nbsp;I&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;C&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;G&nbsp;&nbsp;S&nbsp;&nbsp;*&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;F&nbsp;&nbsp;V&nbsp;&nbsp;P&nbsp;&nbsp;Y&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;F&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;E&nbsp;&nbsp;A&nbsp;&nbsp;A&nbsp;&nbsp;V&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;H&nbsp;&nbsp;N&nbsp;&nbsp;E&nbsp;&nbsp;V&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;C&nbsp;&nbsp;H&nbsp;&nbsp;I</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;H&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;P&nbsp;&nbsp;K&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;K&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;C&nbsp;&nbsp;A&nbsp;&nbsp;I&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TCAGACGCCTCGAGGTCTTGGCCTGGGGCTTCGTGGTCTGCCAGGTTTTTTTTATCCCTC</div>
+<div class="sep">56229&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AGTCTGCGGAGCTCCAGAACCGGACCCCGAAGCACCAGACGGTCCAAAAAAAATAGGGAG</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;P&nbsp;&nbsp;R&nbsp;&nbsp;G&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;G&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;G&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;Y&nbsp;&nbsp;P&nbsp;&nbsp;S&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;W&nbsp;&nbsp;G&nbsp;&nbsp;F&nbsp;&nbsp;V&nbsp;&nbsp;V&nbsp;&nbsp;C&nbsp;&nbsp;Q&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;P&nbsp;&nbsp;P</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;D&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;W&nbsp;&nbsp;P&nbsp;&nbsp;G&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;W&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CCCATTCCTGCATTCGCTTCGCTCCCTGattattaaagacattttaaatccTGTCGAATA</div>
+<div class="sep">56289&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GGGTAAGGACGTAAGCGAAGCGAGGGACTAATAATTTCTGTAAAATTTAGGACAGCTTAT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;D&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;P&nbsp;&nbsp;V&nbsp;&nbsp;E&nbsp;&nbsp;Y&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;I&nbsp;&nbsp;R&nbsp;&nbsp;F&nbsp;&nbsp;A&nbsp;&nbsp;P&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;F&nbsp;&nbsp;*&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;I</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P&nbsp;&nbsp;I&nbsp;&nbsp;P&nbsp;&nbsp;A&nbsp;&nbsp;F&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;D&nbsp;&nbsp;Y&nbsp;&nbsp;*&nbsp;&nbsp;R&nbsp;&nbsp;H&nbsp;&nbsp;F&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;R&nbsp;&nbsp;I&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TAAGAAATGACTGCTGCAGATGACACAAACTAAGGAAAAAGTCAGTGCTAGTAATTGGTG</div>
+<div class="sep">56349&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ATTCTTTACTGACGACGTCTACTGTGTTTGATTCCTTTTTCAGTCACGATCATTAACCAC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;M&nbsp;&nbsp;T&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;K&nbsp;&nbsp;E&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;W&nbsp;&nbsp;C&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;N&nbsp;&nbsp;D&nbsp;&nbsp;C&nbsp;&nbsp;C&nbsp;&nbsp;R&nbsp;&nbsp;*&nbsp;&nbsp;H&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;G&nbsp;&nbsp;A</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;E&nbsp;&nbsp;M&nbsp;&nbsp;T&nbsp;&nbsp;A&nbsp;&nbsp;A&nbsp;&nbsp;D&nbsp;&nbsp;D&nbsp;&nbsp;T&nbsp;&nbsp;N&nbsp;&nbsp;*&nbsp;&nbsp;G&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;Q&nbsp;&nbsp;C&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CTAGGCTGTCCAATTACTGTCCTATCTACCCACCCAGGTAGCAaaaaattctggcccaga</div>
+<div class="sep">56409&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GATCCGACAGGTTAATGACAGGATAGATGGGTGGGTCCATCGTTTTTTAAGACCGGGTCT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;A&nbsp;&nbsp;V&nbsp;&nbsp;Q&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;Y&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;T&nbsp;&nbsp;Q&nbsp;&nbsp;V&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;G&nbsp;&nbsp;P&nbsp;&nbsp;D&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;Y&nbsp;&nbsp;C&nbsp;&nbsp;P&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;P&nbsp;&nbsp;P&nbsp;&nbsp;R&nbsp;&nbsp;*&nbsp;&nbsp;Q&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;Q&nbsp;&nbsp;I</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;C&nbsp;&nbsp;P&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;H&nbsp;&nbsp;P&nbsp;&nbsp;G&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;F&nbsp;&nbsp;W&nbsp;&nbsp;P&nbsp;&nbsp;R&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tttgggataaagctggcacagcaagCATTCATCAAAAATCaccaaaagctgattgtgtgg</div>
+<div class="sep">56469&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AAACCCTATTTCGACCGTGTCGTTCGTAAGTAGTTTTTAGTGGTTTTCGACTAACACACC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;W&nbsp;&nbsp;H&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;H&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;C&nbsp;&nbsp;G&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;D&nbsp;&nbsp;K&nbsp;&nbsp;A&nbsp;&nbsp;G&nbsp;&nbsp;T&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;H&nbsp;&nbsp;Q&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;K&nbsp;&nbsp;A&nbsp;&nbsp;D&nbsp;&nbsp;C&nbsp;&nbsp;V&nbsp;&nbsp;G</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;G&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;Q&nbsp;&nbsp;Q&nbsp;&nbsp;A&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;N&nbsp;&nbsp;H&nbsp;&nbsp;Q&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;V&nbsp;&nbsp;W&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gccagaactgggccagagaaattttgctatgtgggtaataaaggcaaaaaggccaaaaat</div>
+<div class="sep">56529&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CGGTCTTGACCCGGTCTCTTTAAAACGATACACCCATTATTTCCGTTTTTCCGGTTTTTA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P&nbsp;&nbsp;E&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;Q&nbsp;&nbsp;R&nbsp;&nbsp;N&nbsp;&nbsp;F&nbsp;&nbsp;A&nbsp;&nbsp;M&nbsp;&nbsp;W&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;R&nbsp;&nbsp;P&nbsp;&nbsp;K&nbsp;&nbsp;M&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q&nbsp;&nbsp;N&nbsp;&nbsp;W&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;E&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;C&nbsp;&nbsp;G&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;R&nbsp;&nbsp;Q&nbsp;&nbsp;K&nbsp;&nbsp;G&nbsp;&nbsp;Q&nbsp;&nbsp;K&nbsp;&nbsp;C</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;T&nbsp;&nbsp;G&nbsp;&nbsp;P&nbsp;&nbsp;E&nbsp;&nbsp;K&nbsp;&nbsp;F&nbsp;&nbsp;C&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;G&nbsp;&nbsp;N&nbsp;&nbsp;K&nbsp;&nbsp;G&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;N&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gtatctcaaataaaaagaaaagacaagCAATGCCAGTACTGATTTTATTATACAGATTTA</div>
+<div class="sep">56589&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CATAGAGTTTATTTTTCTTTTCTGTTCGTTACGGTCATGACTAAAATAATATGTCTAAAT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Y&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;E&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;D&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;R&nbsp;&nbsp;Q&nbsp;&nbsp;A&nbsp;&nbsp;M&nbsp;&nbsp;P&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;R&nbsp;&nbsp;F&nbsp;&nbsp;I</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;R&nbsp;&nbsp;K&nbsp;&nbsp;D&nbsp;&nbsp;K&nbsp;&nbsp;Q&nbsp;&nbsp;C&nbsp;&nbsp;Q&nbsp;&nbsp;Y&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;Y&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;D&nbsp;&nbsp;L&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTTTCTTATAGAGTACGCTTCATATGTTATCACTTTTATATTCTCAAAACTGGTACCATA</div>
+<div class="sep">56649&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AAAAGAATATCTCATGCGAAGTATACAATAGTGAAAATATAAGAGTTTTGACCATGGTAT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;E&nbsp;&nbsp;Y&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;P&nbsp;&nbsp;Y&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;M&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;S&nbsp;&nbsp;Q&nbsp;&nbsp;N&nbsp;&nbsp;W&nbsp;&nbsp;Y&nbsp;&nbsp;H&nbsp;&nbsp;T</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;Y&nbsp;&nbsp;R&nbsp;&nbsp;V&nbsp;&nbsp;R&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;C&nbsp;&nbsp;Y&nbsp;&nbsp;H&nbsp;&nbsp;F&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;G&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CAATTTCGTCAGCATtttaaaaggtgaaaaaaaagcaagaaagatcttgatgttttagtg</div>
+<div class="sep">56709&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GTTAAAGCAGTCGTAAAATTTTCCACTTTTTTTTCGTTCTTTCTAGAACTACAAAATCAC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;F&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;G&nbsp;&nbsp;E&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;M&nbsp;&nbsp;F&nbsp;&nbsp;*&nbsp;&nbsp;C&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;F&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;Q&nbsp;&nbsp;E&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;*&nbsp;&nbsp;C&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;V</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q&nbsp;&nbsp;F&nbsp;&nbsp;R&nbsp;&nbsp;Q&nbsp;&nbsp;H&nbsp;&nbsp;F&nbsp;&nbsp;K&nbsp;&nbsp;R&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;D&nbsp;&nbsp;L&nbsp;&nbsp;D&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tttttgctgatttaataactttttttggcGCATTTATAAAATTAAGTCTTTTGGGGTCCT</div>
+<div class="sep">56769&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AAAAACGACTAAATTATTGAAAAAAACCGCGTAAATATTTTAATTCAGAAAACCCCAGGA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;C&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;N&nbsp;&nbsp;N&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;W&nbsp;&nbsp;R&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;G&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;A&nbsp;&nbsp;D&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;G&nbsp;&nbsp;A&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;S&nbsp;&nbsp;F</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;H&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;N&nbsp;&nbsp;*&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;W&nbsp;&nbsp;G&nbsp;&nbsp;P&nbsp;&nbsp;</div>
+</div><div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TCTTTTTGAGAACTGCTGTCATAAAAGTCTAATATCACACAGTCTTCTCCTATATTTCTT</div>
+<div class="sep">56829&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AGAAAAACTCTTGACGACAGTATTTTCAGATTATAGTGTGTCAGAAGAGGATATAAAGAA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;E&nbsp;&nbsp;N&nbsp;&nbsp;C&nbsp;&nbsp;C&nbsp;&nbsp;H&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;H&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;T&nbsp;&nbsp;A&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;*&nbsp;&nbsp;Y&nbsp;&nbsp;H&nbsp;&nbsp;T&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;C</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;*&nbsp;&nbsp;E&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;Q&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GCCTAACACAAGTTTCCCATGTATATCTACAG<span class="exon" id="Exon2">CTATCGAGTCTCCAACAAGCCTGTTCTC</span></div>
+<div class="sep">56889&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CGGATTGTGTTCAAAGGGTACATATAGATGTCGATAGCTCAGAGGTTGTTCGGACAAGAG</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P&nbsp;&nbsp;N&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;C&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;A&nbsp;&nbsp;I&nbsp;&nbsp;E&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;Q&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;H&nbsp;&nbsp;V&nbsp;&nbsp;Y&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;Q&nbsp;&nbsp;A&nbsp;&nbsp;C&nbsp;&nbsp;S&nbsp;&nbsp;P</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;*&nbsp;&nbsp;H&nbsp;&nbsp;K&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;M&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;S&nbsp;<span class="frame">&nbsp;Y&nbsp;&nbsp;R&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;K&nbsp;&nbsp;P&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;</span></div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">CATCCTGAGTTCAAACGATCTGTGAAGGAGCTTCCCAAGACATACAACCTTCAATTCAAG</span></div>
+<div class="sep">56949&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GTAGGACTCAAGTTTGCTAGACACTTCCTCGAAGGGTTCTGTATGTTGGAAGTTAAGTTC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;D&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;R&nbsp;&nbsp;H&nbsp;&nbsp;T&nbsp;&nbsp;T&nbsp;&nbsp;F&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;*&nbsp;&nbsp;V&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;C&nbsp;&nbsp;E&nbsp;&nbsp;G&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;Q&nbsp;&nbsp;D&nbsp;&nbsp;I&nbsp;&nbsp;Q&nbsp;&nbsp;P&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;Q&nbsp;&nbsp;A</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">H&nbsp;&nbsp;P&nbsp;&nbsp;E&nbsp;&nbsp;F&nbsp;&nbsp;K&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;E&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;Y&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;F&nbsp;&nbsp;K&nbsp;&nbsp;</span></div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">CCGCGTTTCTACAAGTTCATTAACACCTTTGGAACCCATTACATCACAAAG</span>GTAATTCAA</div>
+<div class="sep">57009&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GGCGCAAAGATGTTCAAGTAATTGTGGAAACCTTGGGTAATGTAGTGTTTCCATTAAGTT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;P&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;Q&nbsp;&nbsp;R&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;K&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;V&nbsp;&nbsp;H&nbsp;&nbsp;*&nbsp;&nbsp;H&nbsp;&nbsp;L&nbsp;&nbsp;W&nbsp;&nbsp;N&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;H&nbsp;&nbsp;K&nbsp;&nbsp;G&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;R</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">P&nbsp;&nbsp;R&nbsp;&nbsp;F&nbsp;&nbsp;Y&nbsp;&nbsp;K&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;N&nbsp;&nbsp;T&nbsp;&nbsp;F&nbsp;&nbsp;G&nbsp;&nbsp;T&nbsp;&nbsp;H&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;K&nbsp;&nbsp;</span>V&nbsp;&nbsp;I&nbsp;&nbsp;Q&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GGGTCGACTTCTTTATAATTTACGACACTTGCACTGAATGGATTACAAAGGCCAAAATAC</div>
+<div class="sep">57069&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CCCAGCTGAAGAAATATTAAATGCTGTGAACGTGACTTACCTAATGTTTCCGGTTTTATG</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;H&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;*&nbsp;&nbsp;M&nbsp;&nbsp;D&nbsp;&nbsp;Y&nbsp;&nbsp;K&nbsp;&nbsp;G&nbsp;&nbsp;Q&nbsp;&nbsp;N&nbsp;&nbsp;T&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V&nbsp;&nbsp;D&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;D&nbsp;&nbsp;T&nbsp;&nbsp;C&nbsp;&nbsp;T&nbsp;&nbsp;E&nbsp;&nbsp;W&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;K&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;L</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;T&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;G&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;R&nbsp;&nbsp;P&nbsp;&nbsp;K&nbsp;&nbsp;Y&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTCAACAAGCCAAATCAGTAATCAGATTTATTTTGCCAG<span class="exon" id="Exon3">GTAACTCTTGGCGGAAACGTG</span></div>
+<div class="sep">57129&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AAGTTGTTCGGTTTAGTCATTAGTCTAAATAAAACGGTCCATTGAGAACCGCCTTTGCAC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;F&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;E&nbsp;&nbsp;T&nbsp;&nbsp;C&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q&nbsp;&nbsp;Q&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;R&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;G&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;W&nbsp;&nbsp;R&nbsp;&nbsp;K&nbsp;&nbsp;R&nbsp;&nbsp;A</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;N&nbsp;&nbsp;K&nbsp;&nbsp;P&nbsp;&nbsp;N&nbsp;&nbsp;Q&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;D&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;C&nbsp;&nbsp;Q&nbsp;&nbsp;<span class="frame">V&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;G&nbsp;&nbsp;N&nbsp;&nbsp;V&nbsp;&nbsp;</span></div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">CACTCAGTGACCAGTATCAGACAATGTGAAACCGCTCTTCAGGGCTTAAGCACAGACGAA</span></div>
+<div class="sep">57189&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GTGAGTCACTGGTCATAGTCTGTTACACTTTGGCGAGAAGTCCCGAATTCGTGTCTGCTT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;Q&nbsp;&nbsp;*&nbsp;&nbsp;P&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;D&nbsp;&nbsp;N&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;R&nbsp;&nbsp;A&nbsp;&nbsp;*&nbsp;&nbsp;A&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;K&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;D&nbsp;&nbsp;Q&nbsp;&nbsp;Y&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;M&nbsp;&nbsp;*&nbsp;&nbsp;N&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;G&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;H&nbsp;&nbsp;R&nbsp;&nbsp;R&nbsp;&nbsp;S</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">H&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;R&nbsp;&nbsp;Q&nbsp;&nbsp;C&nbsp;&nbsp;E&nbsp;&nbsp;T&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;G&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;D&nbsp;&nbsp;E&nbsp;&nbsp;</span></div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">GTAAAGGCCTGCTTGGATTTGGAGGCAAATATGAGCATTCTTGGCAAAGCAGACATGAAA</span></div>
+<div class="sep">57249&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CATTTCCGGACGAACCTAAACCTCCGTTTATACTCGTAAGAACCGTTTCGTCTGTACTTT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;R&nbsp;&nbsp;P&nbsp;&nbsp;A&nbsp;&nbsp;W&nbsp;&nbsp;I&nbsp;&nbsp;W&nbsp;&nbsp;R&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;*&nbsp;&nbsp;A&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K&nbsp;&nbsp;G&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;F&nbsp;&nbsp;G&nbsp;&nbsp;G&nbsp;&nbsp;K&nbsp;&nbsp;Y&nbsp;&nbsp;E&nbsp;&nbsp;H&nbsp;&nbsp;S&nbsp;&nbsp;W&nbsp;&nbsp;Q&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;H&nbsp;&nbsp;E&nbsp;&nbsp;S</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">V&nbsp;&nbsp;K&nbsp;&nbsp;A&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;D&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;A&nbsp;&nbsp;N&nbsp;&nbsp;M&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;K&nbsp;&nbsp;A&nbsp;&nbsp;D&nbsp;&nbsp;M&nbsp;&nbsp;K&nbsp;&nbsp;</span></div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">GCCGAATCAAAACACTGTAGTCAAAATCAGGACAAAACAGAGAGCAAAACCAGCTTCTCC</span></div>
+<div class="sep">57309&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CGGCTTAGTTTTGTGACATCAGTTTTAGTCCTGTTTTGTCTCTCGTTTTGGTCGAAGAGG</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P&nbsp;&nbsp;N&nbsp;&nbsp;Q&nbsp;&nbsp;N&nbsp;&nbsp;T&nbsp;&nbsp;V&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;R&nbsp;&nbsp;T&nbsp;&nbsp;K&nbsp;&nbsp;Q&nbsp;&nbsp;R&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;P&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;G&nbsp;&nbsp;Q&nbsp;&nbsp;N&nbsp;&nbsp;R&nbsp;&nbsp;E&nbsp;&nbsp;Q&nbsp;&nbsp;N&nbsp;&nbsp;Q&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;Q</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">A&nbsp;&nbsp;E&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;H&nbsp;&nbsp;C&nbsp;&nbsp;S&nbsp;&nbsp;Q&nbsp;&nbsp;N&nbsp;&nbsp;Q&nbsp;&nbsp;D&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;E&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;</span></div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">AGCCGCTTCAATGACAG</span>GTGAGTTCATTCGTGTATAGCTTGTCTTACATATATTGCCAGT</div>
+<div class="sep">57369&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TCGGCGAAGTTACTGTCCACTCAAGTAAGCACATATCGAACAGAATGTATATAACGGTCA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;M&nbsp;&nbsp;T&nbsp;&nbsp;G&nbsp;&nbsp;E&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;R&nbsp;&nbsp;V&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;V&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;*&nbsp;&nbsp;Q&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;V&nbsp;&nbsp;Y&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;C&nbsp;&nbsp;Q&nbsp;&nbsp;W</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">S&nbsp;&nbsp;R&nbsp;&nbsp;F&nbsp;&nbsp;N&nbsp;&nbsp;D&nbsp;&nbsp;R&nbsp;</span>&nbsp;*&nbsp;&nbsp;V&nbsp;&nbsp;H&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;I&nbsp;&nbsp;A&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ggagtaaagtaacaaattacaaattctcaaatgactgtaattgagtagtttttcctcagG</div>
+<div class="sep">57429&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CCTCATTTCATTGTTTAATGTTTAAGAGTTTACTGACATTAACTCATCAAAAAGGAGTCC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;G&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;T&nbsp;&nbsp;N&nbsp;&nbsp;Y&nbsp;&nbsp;K&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;D&nbsp;&nbsp;C&nbsp;&nbsp;N&nbsp;&nbsp;*&nbsp;&nbsp;V&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;Q&nbsp;&nbsp;E</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;*&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;Q&nbsp;&nbsp;M&nbsp;&nbsp;T&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;E&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;</div>
+<div class="hidden" id="toggle_iExon3" onclick="toggleIntron('iExon3')" title="Show intron"><hr /></div><div class="intron_collapse" id="iExon3" onclick="toggleIntron('iExon3')" title="Hide intron"><div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AATTTAAAAAaggtgtacttttactttccctaaagtacatttttagtgcagcatctgtac</div>
+<div class="sep">57489&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTAAATTTTTTCCACATGAAAATGAAAGGGATTTCATGTAAAAATCACGTCGTAGACATG</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;R&nbsp;&nbsp;C&nbsp;&nbsp;T&nbsp;&nbsp;F&nbsp;&nbsp;T&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;H&nbsp;&nbsp;F&nbsp;&nbsp;*&nbsp;&nbsp;C&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;C&nbsp;&nbsp;T&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;G&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;L</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;Y&nbsp;&nbsp;F&nbsp;&nbsp;Y&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;Q&nbsp;&nbsp;H&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ttttactccacactccattatttcttgtctatgagAATAGTAGAAAAGTTaaatcctgtg</div>
+<div class="sep">57549&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AAAATGAGGTGTGAGGTAATAAAGAACAGATACTCTTATCATCTTTTCAATTTAGGACAC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;T&nbsp;&nbsp;P&nbsp;&nbsp;H&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;E&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;*&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;T&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;Y&nbsp;&nbsp;E&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;D</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;Y&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;Y&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;M&nbsp;&nbsp;R&nbsp;&nbsp;I&nbsp;&nbsp;V&nbsp;&nbsp;E&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;P&nbsp;&nbsp;V&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;attcctgtccaaatcgcacatagaaattAAATTGCgtcatactgaacaacctcaagataT</div>
+<div class="sep">57609&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TAAGGACAGGTTTAGCGTGTATCTTTAATTTAACGCAGTATGACTTGTTGGAGTTCTATA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;H&nbsp;&nbsp;I&nbsp;&nbsp;E&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;H&nbsp;&nbsp;T&nbsp;&nbsp;E&nbsp;&nbsp;Q&nbsp;&nbsp;P&nbsp;&nbsp;Q&nbsp;&nbsp;D&nbsp;&nbsp;M&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;P&nbsp;&nbsp;N&nbsp;&nbsp;R&nbsp;&nbsp;T&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;C&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;C</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;P&nbsp;&nbsp;V&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;A&nbsp;&nbsp;H&nbsp;&nbsp;R&nbsp;&nbsp;N&nbsp;&nbsp;*&nbsp;&nbsp;I&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;Y&nbsp;&nbsp;*&nbsp;&nbsp;T&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;Y&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GTGCActatataaatgcagcaaactatttgaaagcattaaaagtgtttaaGATGTGTAAA</div>
+<div class="sep">57669&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CACGTGATATATTTACGTCGTTTGATAAACTTTCGTAATTTTCACAAATTCTACACATTT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;*&nbsp;&nbsp;M&nbsp;&nbsp;Q&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;H&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;C&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;K&nbsp;&nbsp;C&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;E&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;*&nbsp;&nbsp;D&nbsp;&nbsp;V&nbsp;&nbsp;*&nbsp;&nbsp;N</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V&nbsp;&nbsp;H&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;N&nbsp;&nbsp;A&nbsp;&nbsp;A&nbsp;&nbsp;N&nbsp;&nbsp;Y&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;K&nbsp;&nbsp;M&nbsp;&nbsp;C&nbsp;&nbsp;K&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ATGTTTACACGCATTGACCTAGagactggctgtttctcaatatgtgttcttcagcaatct</div>
+<div class="sep">57729&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TACAAATGTGCGTAACTGGATCTCTGACCGACAAAGAGTTATACACAAGAAGTCGTTAGA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;*&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;Q&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;H&nbsp;&nbsp;*&nbsp;&nbsp;P&nbsp;&nbsp;R&nbsp;&nbsp;D&nbsp;&nbsp;W&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;M&nbsp;&nbsp;C&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;I&nbsp;&nbsp;L</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;F&nbsp;&nbsp;T&nbsp;&nbsp;R&nbsp;&nbsp;I&nbsp;&nbsp;D&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;T&nbsp;&nbsp;G&nbsp;&nbsp;C&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;C&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;Q&nbsp;&nbsp;S&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tgcgtccttgtgttctcgtgtaacgtcatcatcgaCTGCCAAAGTTCAGCTCCCGCAAGA</div>
+<div class="sep">57789&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACGCAGGAACACAAGAGCACATTGCAGTAGTAGCTGACGGTTTCAAGTCGAGGGCGTTCT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;C&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;V&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;Q&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;Q&nbsp;&nbsp;E&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;P&nbsp;&nbsp;C&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;*&nbsp;&nbsp;R&nbsp;&nbsp;H&nbsp;&nbsp;H&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;K&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;K&nbsp;&nbsp;N</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;N&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;D&nbsp;&nbsp;C&nbsp;&nbsp;Q&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;P&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACAGCGACACGTGACAGTTCCCGGATGTGTTTTTGATATcaaggatgcaccgatgcagac</div>
+<div class="sep">57849&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TGTCGCTGTGCACTGTCAAGGGCCTACACAAAAACTATAGTTCCTACGTGGCTACGTCTG</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q&nbsp;&nbsp;R&nbsp;&nbsp;H&nbsp;&nbsp;V&nbsp;&nbsp;T&nbsp;&nbsp;V&nbsp;&nbsp;P&nbsp;&nbsp;G&nbsp;&nbsp;C&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;D&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;D&nbsp;&nbsp;A&nbsp;&nbsp;P&nbsp;&nbsp;M&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;D&nbsp;&nbsp;T&nbsp;&nbsp;*&nbsp;&nbsp;Q&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;D&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;M&nbsp;&nbsp;H&nbsp;&nbsp;R&nbsp;&nbsp;C&nbsp;&nbsp;R&nbsp;&nbsp;L</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;A&nbsp;&nbsp;T&nbsp;&nbsp;R&nbsp;&nbsp;D&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;M&nbsp;&nbsp;C&nbsp;&nbsp;F&nbsp;&nbsp;*&nbsp;&nbsp;Y&nbsp;&nbsp;Q&nbsp;&nbsp;G&nbsp;&nbsp;C&nbsp;&nbsp;T&nbsp;&nbsp;D&nbsp;&nbsp;A&nbsp;&nbsp;D&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ttgagcaccgatctTGCTTTAGACGTCCCAGAAGTAATTGCGACTGGAGGTTGAATgcag</div>
+<div class="sep">57909&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AACTCGTGGCTAGAACGAAATCTGCAGGGTCTTCATTAACGCTGACCTCCAACTTACGTC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;A&nbsp;&nbsp;P&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;Q&nbsp;&nbsp;K&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;V&nbsp;&nbsp;E&nbsp;&nbsp;C&nbsp;&nbsp;R&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;H&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;F&nbsp;&nbsp;R&nbsp;&nbsp;R&nbsp;&nbsp;P&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;C&nbsp;&nbsp;D&nbsp;&nbsp;W&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;A&nbsp;&nbsp;G</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;D&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;D&nbsp;&nbsp;V&nbsp;&nbsp;P&nbsp;&nbsp;E&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;A&nbsp;&nbsp;T&nbsp;&nbsp;G&nbsp;&nbsp;G&nbsp;&nbsp;*&nbsp;&nbsp;M&nbsp;&nbsp;Q&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gtttattattaaagttcagagataccACTTATTTACcttaggagtttccctaaatcaggg</div>
+<div class="sep">57969&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CAAATAATAATTTCAAGTCTCTATGGTGAATAAATGGAATCCTCAAAGGGATTTAGTCCC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;Q&nbsp;&nbsp;R&nbsp;&nbsp;Y&nbsp;&nbsp;H&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;Q&nbsp;&nbsp;G&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;F&nbsp;&nbsp;R&nbsp;&nbsp;D&nbsp;&nbsp;T&nbsp;&nbsp;T&nbsp;&nbsp;Y&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;*&nbsp;&nbsp;E&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;*&nbsp;&nbsp;I&nbsp;&nbsp;R&nbsp;&nbsp;G</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V&nbsp;&nbsp;Y&nbsp;&nbsp;Y&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;E&nbsp;&nbsp;I&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;G&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gtgtccaaactcggtcctgcaaggccagtgtcctgcagattttagctccaacttgcctca</div>
+<div class="sep">58029&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CACAGGTTTGAGCCAGGACGTTCCGGTCACAGGACGTCTAAAATCGAGGTTGAACGGAGT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C&nbsp;&nbsp;P&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;G&nbsp;&nbsp;Q&nbsp;&nbsp;C&nbsp;&nbsp;P&nbsp;&nbsp;A&nbsp;&nbsp;D&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;Q&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;K&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;P&nbsp;&nbsp;T&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;S</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;P&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;P&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;R&nbsp;&nbsp;F&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gcacacctgcaaGGAGGTTTAGAAAGGCTAGTAAAGCTgctgtcacactagagtttgtgt</div>
+<div class="sep">58089&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CGTGTGGACGTTCCTCCAAATCTTTCCGATCATTTCGACGACAGTGTGATCTCAAACACA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;T&nbsp;&nbsp;C&nbsp;&nbsp;K&nbsp;&nbsp;E&nbsp;&nbsp;V&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;G&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;C&nbsp;&nbsp;H&nbsp;&nbsp;T&nbsp;&nbsp;R&nbsp;&nbsp;V&nbsp;&nbsp;C&nbsp;&nbsp;V&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;P&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;R&nbsp;&nbsp;F&nbsp;&nbsp;R&nbsp;&nbsp;K&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;A&nbsp;&nbsp;A&nbsp;&nbsp;V&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;F&nbsp;&nbsp;V&nbsp;&nbsp;C</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;H&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;G&nbsp;&nbsp;G&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;H&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;C&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gtgcgaaattctgttgtgcgGAGCTGCGAAAAGGGATGGGATTAAGTAAAACTGATCATC</div>
+<div class="sep">58149&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CACGCTTTAAGACAACACGCCTCGACGCTTTTCCCTACCCTAATTCATTTTGACTAGTAG</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C&nbsp;&nbsp;E&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;C&nbsp;&nbsp;G&nbsp;&nbsp;A&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;R&nbsp;&nbsp;D&nbsp;&nbsp;G&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;*&nbsp;&nbsp;N&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;F&nbsp;&nbsp;C&nbsp;&nbsp;C&nbsp;&nbsp;A&nbsp;&nbsp;E&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;K&nbsp;&nbsp;G&nbsp;&nbsp;M&nbsp;&nbsp;G&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;D&nbsp;&nbsp;H&nbsp;&nbsp;Q</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V&nbsp;&nbsp;R&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;V&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;E&nbsp;&nbsp;K&nbsp;&nbsp;G&nbsp;&nbsp;W&nbsp;&nbsp;D&nbsp;&nbsp;*&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AAGGGATGCATGATTTATTGATAAAATTTTTCAAATATGACTAAAGTAAGTATTACGTGG</div>
+<div class="sep">58209&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTCCCTACGTACTAAATAACTATTTTAAAAAGTTTATACTGATTTCATTCATAATGCACC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;D&nbsp;&nbsp;A&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;D&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;*&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;G&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G&nbsp;&nbsp;M&nbsp;&nbsp;H&nbsp;&nbsp;D&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;K&nbsp;&nbsp;Y&nbsp;&nbsp;D&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;Y&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;V</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K&nbsp;&nbsp;G&nbsp;&nbsp;C&nbsp;&nbsp;M&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;N&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;M&nbsp;&nbsp;T&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;W&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TGGCAAAGATAAAGTTTCATCTAAAAAACACtgcattcaaatattttggacAAAACGGTA</div>
+<div class="sep">58269&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACCGTTTCTATTTCAAAGTAGATTTTTTGTGACGTAAGTTTATAAAACCTGTTTTGCCAT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G&nbsp;&nbsp;K&nbsp;&nbsp;D&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;H&nbsp;&nbsp;C&nbsp;&nbsp;I&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;W&nbsp;&nbsp;T&nbsp;&nbsp;K&nbsp;&nbsp;R&nbsp;&nbsp;Y&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;F&nbsp;&nbsp;H&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;N&nbsp;&nbsp;T&nbsp;&nbsp;A&nbsp;&nbsp;F&nbsp;&nbsp;K&nbsp;&nbsp;Y&nbsp;&nbsp;F&nbsp;&nbsp;G&nbsp;&nbsp;Q&nbsp;&nbsp;N&nbsp;&nbsp;G&nbsp;&nbsp;T</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;Q&nbsp;&nbsp;R&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;D&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;V&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CAACATCTTAGCAGCTGTTTGTCTTATATCTGCAAAAACACTGCAAGAAGTTTAAAAGAT</div>
+<div class="sep">58329&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GTTGTAGAATCGTCGACAAACAGAATATAGACGTTTTTGTGACGTTCTTCAAATTTTCTA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;A&nbsp;&nbsp;V&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;E&nbsp;&nbsp;V&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;*&nbsp;&nbsp;Q&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;K&nbsp;&nbsp;H&nbsp;&nbsp;C&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;F&nbsp;&nbsp;K&nbsp;&nbsp;R&nbsp;&nbsp;L</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q&nbsp;&nbsp;H&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;C&nbsp;&nbsp;K&nbsp;&nbsp;N&nbsp;&nbsp;T&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;D&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TAGTGTTCAtcctaaaaaatgtgttttaaacttGTTTTCCACTCAAGATATGTtaacatt</div>
+<div class="sep">58389&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ATCACAAGTAGGATTTTTTACACAAAATTTGAACAAAAGGTGAGTTCTATACAATTGTAA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;H&nbsp;&nbsp;P&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;C&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;Q&nbsp;&nbsp;D&nbsp;&nbsp;M&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;F&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;N&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;*&nbsp;&nbsp;T&nbsp;&nbsp;C&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;C&nbsp;&nbsp;*&nbsp;&nbsp;H&nbsp;&nbsp;S</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;C&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;M&nbsp;&nbsp;C&nbsp;&nbsp;F&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;H&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;N&nbsp;&nbsp;I&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cttaaatcaataaactatattttgtgtatattgagaagtttattttttcaaatacaaata</div>
+<div class="sep">58449&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GAATTTAGTTATTTGATATAAAACACATATAACTCTTCAAATAAAAAAGTTTATGTTTAT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;Q&nbsp;&nbsp;*&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;C&nbsp;&nbsp;V&nbsp;&nbsp;Y&nbsp;&nbsp;*&nbsp;&nbsp;E&nbsp;&nbsp;V&nbsp;&nbsp;Y&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;K&nbsp;&nbsp;Y&nbsp;&nbsp;K&nbsp;&nbsp;*&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;I&nbsp;&nbsp;N&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;F&nbsp;&nbsp;V&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;E&nbsp;&nbsp;K&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;T&nbsp;&nbsp;N&nbsp;&nbsp;K</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;N&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;C&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aagcttatatatatatatatatatatatacacacacacatacacacatatatatatatat</div>
+<div class="sep">58509&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTCGAATATATATATATATATATATATATGTGTGTGTGTATGTGTGTATATATATATATA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;H&nbsp;&nbsp;T&nbsp;&nbsp;H&nbsp;&nbsp;T&nbsp;&nbsp;H&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;H&nbsp;&nbsp;T&nbsp;&nbsp;H&nbsp;&nbsp;I&nbsp;&nbsp;H&nbsp;&nbsp;T&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;H&nbsp;&nbsp;T&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;H&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;atatatatatatatatatatacatatacatatatatatatatatatacatatacatatat</div>
+<div class="sep">58569&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TATATATATATATATATATATGTATATGTATATATATATATATATATGTATATGTATATA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;H&nbsp;&nbsp;I&nbsp;&nbsp;H&nbsp;&nbsp;I&nbsp;&nbsp;Y</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;H&nbsp;&nbsp;I&nbsp;&nbsp;H&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;atatatacatatatacatatatatatatacatatatacatacacacacacagttgaaatc</div>
+<div class="sep">58629&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TATATATGTATATATGTATATATATATATGTATATATGTATGTGTGTGTGTCAACTTTAG</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;H&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;H&nbsp;&nbsp;T&nbsp;&nbsp;H&nbsp;&nbsp;T&nbsp;&nbsp;Q&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;H&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;H&nbsp;&nbsp;T&nbsp;&nbsp;H&nbsp;&nbsp;S&nbsp;&nbsp;*&nbsp;&nbsp;N&nbsp;&nbsp;Q</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;H&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;H&nbsp;&nbsp;T&nbsp;&nbsp;V&nbsp;&nbsp;E&nbsp;&nbsp;I&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;agaattattagccccctttaaatttattttttctttaaattatttcccaaattatgttta</div>
+<div class="sep">58689&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TCTTAATAATCGGGGGAAATTTAAATAAAAAAGAAATTTAATAAAGGGTTTAATACAAAT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;P&nbsp;&nbsp;F&nbsp;&nbsp;K&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;Y&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;N&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;*&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;Y&nbsp;&nbsp;*&nbsp;&nbsp;P&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;M&nbsp;&nbsp;F&nbsp;&nbsp;N</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;acagagcaaggaaattttcatagtatgtccgataacattttttaataaagtataatttgt</div>
+<div class="sep">58749&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TGTCTCGTTCCTTTAAAAGTATCATACAGGCTATTGTAAAAAATTATTTCATATTAAACA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;E&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;V&nbsp;&nbsp;C&nbsp;&nbsp;P&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;N&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;V&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;K&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;*&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;R&nbsp;&nbsp;*&nbsp;&nbsp;H&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;Y&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;F</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;E&nbsp;&nbsp;Q&nbsp;&nbsp;G&nbsp;&nbsp;N&nbsp;&nbsp;F&nbsp;&nbsp;H&nbsp;&nbsp;S&nbsp;&nbsp;M&nbsp;&nbsp;S&nbsp;&nbsp;D&nbsp;&nbsp;N&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;C&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tttattttggctagaataaaatcagttgtaAATTTTGTccaattttagcttatttttaag</div>
+<div class="sep">58809&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AAATAAAACCGATCTTATTTTAGTCAACATTTAAAACAGGTTAAAATCGAATAAAAATTC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;W&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;*&nbsp;&nbsp;N&nbsp;&nbsp;Q&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Y&nbsp;&nbsp;F&nbsp;&nbsp;G&nbsp;&nbsp;*&nbsp;&nbsp;N&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;K&nbsp;&nbsp;F&nbsp;&nbsp;C&nbsp;&nbsp;P&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;Y&nbsp;&nbsp;F&nbsp;&nbsp;*&nbsp;&nbsp;A</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;V&nbsp;&nbsp;N&nbsp;&nbsp;F&nbsp;&nbsp;V&nbsp;&nbsp;Q&nbsp;&nbsp;F&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;K&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctttttttttcgatagcctacagaacaaaccattgttatacaatagcttgcctaataccc</div>
+<div class="sep">58869&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GAAAAAAAAAGCTATCGGATGTCTTGTTTGGTAACAATATGTTATCGAACGGATTATGGG</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;R&nbsp;&nbsp;*&nbsp;&nbsp;P&nbsp;&nbsp;T&nbsp;&nbsp;E&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;Q&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;*&nbsp;&nbsp;Y&nbsp;&nbsp;P&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;D&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;N&nbsp;&nbsp;K&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;N&nbsp;&nbsp;T&nbsp;&nbsp;L</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;A&nbsp;&nbsp;Y&nbsp;&nbsp;R&nbsp;&nbsp;T&nbsp;&nbsp;N&nbsp;&nbsp;H&nbsp;&nbsp;C&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;A&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;P&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;taacctgcctagttaacctaattaacctagttaagcctttaaatgtcactttaagctgta</div>
+<div class="sep">58929&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ATTGGACGGATCAATTGGATTAATTGGATCAATTCGGAAATTTACAGTGAAATTCGACAT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;S&nbsp;&nbsp;*&nbsp;&nbsp;P&nbsp;&nbsp;N&nbsp;&nbsp;*&nbsp;&nbsp;P&nbsp;&nbsp;S&nbsp;&nbsp;*&nbsp;&nbsp;A&nbsp;&nbsp;F&nbsp;&nbsp;K&nbsp;&nbsp;C&nbsp;&nbsp;H&nbsp;&nbsp;F&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;V&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;I</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;P&nbsp;&nbsp;A&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;M&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;A&nbsp;&nbsp;V&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tagaaatgtcttgaaaaatatctagtcaaatattatttactgtcatcatggcaaagataa</div>
+<div class="sep">58989&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ATCTTTACAGAACTTTTTATAGATCAGTTTATAATAAATGACAGTAGTACCGTTTCTATT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;N&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;N&nbsp;&nbsp;I&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;C&nbsp;&nbsp;H&nbsp;&nbsp;H&nbsp;&nbsp;G&nbsp;&nbsp;K&nbsp;&nbsp;D&nbsp;&nbsp;K&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;M&nbsp;&nbsp;S&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;T&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;M&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;K</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;K&nbsp;&nbsp;Y&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;Y&nbsp;&nbsp;Y&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;W&nbsp;&nbsp;Q&nbsp;&nbsp;R&nbsp;&nbsp;*&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aataaatcagttattagagaggagctattaaaactattatgtttagaaatgtgctgaaaa</div>
+<div class="sep">59049&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTATTTAGTCAATAATCTCTCCTCGATAATTTTGATAATACAAATCTTTACACGACTTTT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;N&nbsp;&nbsp;Q&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;Y&nbsp;&nbsp;*&nbsp;&nbsp;N&nbsp;&nbsp;Y&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;C&nbsp;&nbsp;A&nbsp;&nbsp;E&nbsp;&nbsp;K&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;Y&nbsp;&nbsp;*&nbsp;&nbsp;R&nbsp;&nbsp;G&nbsp;&nbsp;A&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;M&nbsp;&nbsp;F&nbsp;&nbsp;R&nbsp;&nbsp;N&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;K</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;R&nbsp;&nbsp;E&nbsp;&nbsp;E&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;M&nbsp;&nbsp;C&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aaatcttctctccgttaaacagaaattggggaaacaaataaacaggggaactaataattc</div>
+<div class="sep">59109&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTTAGAAGAGAGGCAATTTGTCTTTAACCCCTTTGTTTATTTGTCCCCTTGATTATTAAG</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;Q&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;K&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;N&nbsp;&nbsp;R&nbsp;&nbsp;G&nbsp;&nbsp;T&nbsp;&nbsp;N&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;R&nbsp;&nbsp;N&nbsp;&nbsp;W&nbsp;&nbsp;G&nbsp;&nbsp;N&nbsp;&nbsp;K&nbsp;&nbsp;*&nbsp;&nbsp;T&nbsp;&nbsp;G&nbsp;&nbsp;E&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;L</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;*&nbsp;&nbsp;T&nbsp;&nbsp;E&nbsp;&nbsp;I&nbsp;&nbsp;G&nbsp;&nbsp;E&nbsp;&nbsp;T&nbsp;&nbsp;N&nbsp;&nbsp;K&nbsp;&nbsp;Q&nbsp;&nbsp;G&nbsp;&nbsp;N&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tgactatatatttattctgatatatatatatatatatactgtatgtatgtatatacctac</div>
+<div class="sep">59169&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACTGATATATAAATAAGACTATATATATATATATATATGACATACATACATATATGGATG</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;V&nbsp;&nbsp;C&nbsp;&nbsp;M&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;P&nbsp;&nbsp;T&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;*&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;C&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;L&nbsp;&nbsp;R</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;S&nbsp;&nbsp;D&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;C&nbsp;&nbsp;M&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;Y&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ggacaatttatatatatatatatatggcgaagcagtggtgcagtaggtagtgctgtcgcc</div>
+<div class="sep">59229&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CCTGTTAAATATATATATATATATACCGCTTCGTCACCACGTCATCCATCACGACAGCGG</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;G&nbsp;&nbsp;E&nbsp;&nbsp;A&nbsp;&nbsp;V&nbsp;&nbsp;V&nbsp;&nbsp;Q&nbsp;&nbsp;*&nbsp;&nbsp;V&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;M&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;Q&nbsp;&nbsp;W&nbsp;&nbsp;C&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;*&nbsp;&nbsp;C&nbsp;&nbsp;C&nbsp;&nbsp;R&nbsp;&nbsp;L</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G&nbsp;&nbsp;Q&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;W&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;G&nbsp;&nbsp;A&nbsp;&nbsp;V&nbsp;&nbsp;G&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;V&nbsp;&nbsp;A&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tcacagcaagaaggtcgctggttcgaacctcggctcagttggcgtttctgtgtggagttt</div>
+<div class="sep">59289&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AGTGTCGTTCTTCCAGCGACCAAGCTTGGAGCCGAGTCAACCGCAAAGACACACCTCAAA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;A&nbsp;&nbsp;G&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;G&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;W&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;R&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;Q&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;C&nbsp;&nbsp;G&nbsp;&nbsp;V&nbsp;&nbsp;C</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;Q&nbsp;&nbsp;Q&nbsp;&nbsp;E&nbsp;&nbsp;G&nbsp;&nbsp;R&nbsp;&nbsp;W&nbsp;&nbsp;F&nbsp;&nbsp;E&nbsp;&nbsp;P&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;W&nbsp;&nbsp;R&nbsp;&nbsp;F&nbsp;&nbsp;C&nbsp;&nbsp;V&nbsp;&nbsp;E&nbsp;&nbsp;F&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gcatgttcttcctgcgttcgtgtgggttttctccgggtgctccggtttcccccacagttc</div>
+<div class="sep">59349&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CGTACAAGAAGGACGCAAGCACACCCAAAAGAGGCCCACGAGGCCAAAGGGGGTGTCAAG</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;A&nbsp;&nbsp;F&nbsp;&nbsp;V&nbsp;&nbsp;W&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;G&nbsp;&nbsp;C&nbsp;&nbsp;S&nbsp;&nbsp;G&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;H&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;G&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;G&nbsp;&nbsp;A&nbsp;&nbsp;P&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;T&nbsp;&nbsp;V&nbsp;&nbsp;Q</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;C&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;V&nbsp;&nbsp;R&nbsp;&nbsp;V&nbsp;&nbsp;G&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;P&nbsp;&nbsp;Q&nbsp;&nbsp;F&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aaagacatgcggtacaggtgaattgggtaggctaaattgtccgtagtatgtaTGTAgtag</div>
+<div class="sep">59409&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTTCTGTACGCCATGTCCACTTAACCCATCCGATTTAACAGGCATCATACATACATCATC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;C&nbsp;&nbsp;G&nbsp;&nbsp;T&nbsp;&nbsp;G&nbsp;&nbsp;E&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;C&nbsp;&nbsp;P&nbsp;&nbsp;*&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;C&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;H&nbsp;&nbsp;A&nbsp;&nbsp;V&nbsp;&nbsp;Q&nbsp;&nbsp;V&nbsp;&nbsp;N&nbsp;&nbsp;W&nbsp;&nbsp;V&nbsp;&nbsp;G&nbsp;&nbsp;*&nbsp;&nbsp;I&nbsp;&nbsp;V&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;M&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;V&nbsp;&nbsp;V</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K&nbsp;&nbsp;D&nbsp;&nbsp;M&nbsp;&nbsp;R&nbsp;&nbsp;Y&nbsp;&nbsp;R&nbsp;&nbsp;*&nbsp;&nbsp;I&nbsp;&nbsp;G&nbsp;&nbsp;*&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;V&nbsp;&nbsp;C&nbsp;&nbsp;M&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tatgagtgtgtatatgtggatgtttcccagagatgggttgcgggcatctgctgcgtaaaa</div>
+<div class="sep">59469&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ATACTCACACATATACACCTACAAAGGGTCTCTACCCAACGCCCGTAGACGACGCATTTT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;Y&nbsp;&nbsp;M&nbsp;&nbsp;W&nbsp;&nbsp;M&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;R&nbsp;&nbsp;D&nbsp;&nbsp;G&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;A&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;V&nbsp;&nbsp;C&nbsp;&nbsp;I&nbsp;&nbsp;C&nbsp;&nbsp;G&nbsp;&nbsp;C&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;E&nbsp;&nbsp;M&nbsp;&nbsp;G&nbsp;&nbsp;C&nbsp;&nbsp;G&nbsp;&nbsp;H&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;K&nbsp;&nbsp;K</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Y&nbsp;&nbsp;E&nbsp;&nbsp;C&nbsp;&nbsp;V&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;D&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;Q&nbsp;&nbsp;R&nbsp;&nbsp;W&nbsp;&nbsp;V&nbsp;&nbsp;A&nbsp;&nbsp;G&nbsp;&nbsp;I&nbsp;&nbsp;C&nbsp;&nbsp;C&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aacatgctggataagttggcggttaattccgctgtggtgaccccagattaataaaaggac</div>
+<div class="sep">59529&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTGTACGACCTATTCAACCGCCAATTAAGGCGACACCACTGGGGTCTAATTATTTTCCTG</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;C&nbsp;&nbsp;W&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;W&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;W&nbsp;&nbsp;*&nbsp;&nbsp;P&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;N&nbsp;&nbsp;K&nbsp;&nbsp;R&nbsp;&nbsp;T&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;A&nbsp;&nbsp;G&nbsp;&nbsp;*&nbsp;&nbsp;V&nbsp;&nbsp;G&nbsp;&nbsp;G&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;R&nbsp;&nbsp;C&nbsp;&nbsp;G&nbsp;&nbsp;D&nbsp;&nbsp;P&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;G&nbsp;&nbsp;L</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;M&nbsp;&nbsp;L&nbsp;&nbsp;D&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;V&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;V&nbsp;&nbsp;V&nbsp;&nbsp;T&nbsp;&nbsp;P&nbsp;&nbsp;D&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;D&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;taagccgacaagaaaatgaatgaatatataatttttttctttaatgaaaaatataattaa</div>
+<div class="sep">59589&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ATTCGGCTGTTCTTTTACTTACTTATATATTAAAAAAAGAAATTACTTTTTATATTAATT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K&nbsp;&nbsp;P&nbsp;&nbsp;T&nbsp;&nbsp;R&nbsp;&nbsp;K&nbsp;&nbsp;*&nbsp;&nbsp;M&nbsp;&nbsp;N&nbsp;&nbsp;I&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;M&nbsp;&nbsp;K&nbsp;&nbsp;N&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;Q&nbsp;&nbsp;E&nbsp;&nbsp;N&nbsp;&nbsp;E&nbsp;&nbsp;*&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;N&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;K</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;A&nbsp;&nbsp;D&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;M&nbsp;&nbsp;N&nbsp;&nbsp;E&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;N&nbsp;&nbsp;E&nbsp;&nbsp;K&nbsp;&nbsp;Y&nbsp;&nbsp;N&nbsp;&nbsp;*&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aaccaTTACTTTTCTGCTCCATTGTTAGCCATGTTTTCGctctttataaaaatatattat</div>
+<div class="sep">59649&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTGGTAATGAAAAGACGAGGTAACAATCGGTACAAAAGCGAGAAATATTTTTATATAATA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;C&nbsp;&nbsp;*&nbsp;&nbsp;P&nbsp;&nbsp;C&nbsp;&nbsp;F&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;C&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;H&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;K&nbsp;&nbsp;N&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;Y</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;H&nbsp;&nbsp;Y&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;M&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;Y&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;attaaaattgcaGTAATTATGTGATTTTGCACATGTTGATCACCGTTTGTATACTGTTTT</div>
+<div class="sep">59709&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TAATTTTAACGTCATTAATACACTAAAACGTGTACAACTAGTGGCAAACATATGACAAAA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;C&nbsp;&nbsp;D&nbsp;&nbsp;F&nbsp;&nbsp;A&nbsp;&nbsp;H&nbsp;&nbsp;V&nbsp;&nbsp;D&nbsp;&nbsp;H&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;N&nbsp;&nbsp;C&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;M&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;V&nbsp;&nbsp;C&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;*</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;A&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;M&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;C&nbsp;&nbsp;T&nbsp;&nbsp;C&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;F&nbsp;&nbsp;V&nbsp;&nbsp;Y&nbsp;&nbsp;C&nbsp;&nbsp;F&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AATAGAAATGCCATTTACTACAATACCATTTTGGTTATCATGGTTTAACATTTCTTAATG</div>
+<div class="sep">59769&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTATCTTTACGGTAAATGATGTTATGGTAAAACCAATAGTACCAAATTGTAAAGAATTAC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;E&nbsp;&nbsp;M&nbsp;&nbsp;P&nbsp;&nbsp;F&nbsp;&nbsp;T&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;P&nbsp;&nbsp;F&nbsp;&nbsp;W&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;W&nbsp;&nbsp;F&nbsp;&nbsp;N&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;*&nbsp;&nbsp;C&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;C&nbsp;&nbsp;H&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;Y&nbsp;&nbsp;H&nbsp;&nbsp;F&nbsp;&nbsp;G&nbsp;&nbsp;Y&nbsp;&nbsp;H&nbsp;&nbsp;G&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;V</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;R&nbsp;&nbsp;N&nbsp;&nbsp;A&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;Y&nbsp;&nbsp;N&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;M&nbsp;&nbsp;V&nbsp;&nbsp;*&nbsp;&nbsp;H&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;M&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TtcaacaacaaatgttttgtttgttttttaatttttgtaattgaagTACAAAATCACTTT</div>
+<div class="sep">59829&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AAGTTGTTGTTTACAAAACAAACAAAAAATTAAAAACATTAACTTCATGTTTTAGTGAAA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;T&nbsp;&nbsp;N&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;Y&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q&nbsp;&nbsp;Q&nbsp;&nbsp;Q&nbsp;&nbsp;M&nbsp;&nbsp;F&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;N&nbsp;&nbsp;F&nbsp;&nbsp;C&nbsp;&nbsp;N&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;Y</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;N&nbsp;&nbsp;N&nbsp;&nbsp;K&nbsp;&nbsp;C&nbsp;&nbsp;F&nbsp;&nbsp;V&nbsp;&nbsp;C&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;E&nbsp;&nbsp;V&nbsp;&nbsp;Q&nbsp;&nbsp;N&nbsp;&nbsp;H&nbsp;&nbsp;F&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ATCAACCTTAATATGTACTAGTGATGTGTTGATGATATTTTACTGTCAATGTGTAAACAA</div>
+<div class="sep">59889&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TAGTTGGAATTATACATGATCACTACACAACTACTATAAAATGACAGTTACACATTTGTT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;C&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;D&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;M&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;Y&nbsp;&nbsp;C&nbsp;&nbsp;Q&nbsp;&nbsp;C&nbsp;&nbsp;V&nbsp;&nbsp;N&nbsp;&nbsp;N&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q&nbsp;&nbsp;P&nbsp;&nbsp;*&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;M&nbsp;&nbsp;C&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;Y&nbsp;&nbsp;F&nbsp;&nbsp;T&nbsp;&nbsp;V&nbsp;&nbsp;N&nbsp;&nbsp;V&nbsp;&nbsp;*&nbsp;&nbsp;T&nbsp;&nbsp;T</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;M&nbsp;&nbsp;Y&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;C&nbsp;&nbsp;V&nbsp;&nbsp;D&nbsp;&nbsp;D&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;M&nbsp;&nbsp;C&nbsp;&nbsp;K&nbsp;&nbsp;Q&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CTTACAATCCCTGACCTCCAAGGTTGAACCCTGTAGACAGATATTTACATAAACattttt</div>
+<div class="sep">59949&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GAATGTTAGGGACTGGAGGTTCCAACTTGGGACATCTGTCTATAAATGTATTTGTAAAAA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;E&nbsp;&nbsp;P&nbsp;&nbsp;C&nbsp;&nbsp;R&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;T&nbsp;&nbsp;*&nbsp;&nbsp;T&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Y&nbsp;&nbsp;N&nbsp;&nbsp;P&nbsp;&nbsp;*&nbsp;&nbsp;P&nbsp;&nbsp;P&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;P&nbsp;&nbsp;V&nbsp;&nbsp;D&nbsp;&nbsp;R&nbsp;&nbsp;Y&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;K&nbsp;&nbsp;H&nbsp;&nbsp;F&nbsp;&nbsp;*</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;P&nbsp;&nbsp;D&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;G&nbsp;&nbsp;*&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;T&nbsp;&nbsp;D&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;N&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gacagaaaaaaaatcaaaaagatgTAACAATATCATTTTAATGAGCTCATTTAATGATGA</div>
+<div class="sep">60009&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CTGTCTTTTTTTTAGTTTTTCTACATTGTTATAGTAAAATTACTCGAGTAAATTACTACT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;E&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;R&nbsp;&nbsp;C&nbsp;&nbsp;N&nbsp;&nbsp;N&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;M&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;N&nbsp;&nbsp;D&nbsp;&nbsp;E&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;N&nbsp;&nbsp;Q&nbsp;&nbsp;K&nbsp;&nbsp;D&nbsp;&nbsp;V&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;A&nbsp;&nbsp;H&nbsp;&nbsp;L&nbsp;&nbsp;M&nbsp;&nbsp;M&nbsp;&nbsp;K</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D&nbsp;&nbsp;R&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;M&nbsp;&nbsp;*&nbsp;&nbsp;Q&nbsp;&nbsp;Y&nbsp;&nbsp;H&nbsp;&nbsp;F&nbsp;&nbsp;N&nbsp;&nbsp;E&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AGCAGCAAATTGGAGTGTAAGCATGTGCATATTGCATATATTGAAATATGTTCAATCTCT</div>
+<div class="sep">60069&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TCGTCGTTTAACCTCACATTCGTACACGTATAACGTATATAACTTTATACAAGTTAGAGA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;A&nbsp;&nbsp;N&nbsp;&nbsp;W&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;M&nbsp;&nbsp;C&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;Q&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;G&nbsp;&nbsp;V&nbsp;&nbsp;*&nbsp;&nbsp;A&nbsp;&nbsp;C&nbsp;&nbsp;A&nbsp;&nbsp;Y&nbsp;&nbsp;C&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;*&nbsp;&nbsp;N&nbsp;&nbsp;M&nbsp;&nbsp;F&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;*</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;C&nbsp;&nbsp;K&nbsp;&nbsp;H&nbsp;&nbsp;V&nbsp;&nbsp;H&nbsp;&nbsp;I&nbsp;&nbsp;A&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;E&nbsp;&nbsp;I&nbsp;&nbsp;C&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AATACGTTTCTGACTGTacacttaaagggtcacaaaacgcaacacattgtttgagatgtt</div>
+<div class="sep">60129&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTATGCAAAGACTGACATGTGAATTTCCCAGTGTTTTGCGTTGTGTAACAAACTCTACAA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;R&nbsp;&nbsp;F&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;*&nbsp;&nbsp;R&nbsp;&nbsp;V&nbsp;&nbsp;T&nbsp;&nbsp;K&nbsp;&nbsp;R&nbsp;&nbsp;N&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;E&nbsp;&nbsp;M&nbsp;&nbsp;L&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;D&nbsp;&nbsp;C&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;G&nbsp;&nbsp;S&nbsp;&nbsp;Q&nbsp;&nbsp;N&nbsp;&nbsp;A&nbsp;&nbsp;T&nbsp;&nbsp;H&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;C&nbsp;&nbsp;*</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;T&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;V&nbsp;&nbsp;H&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;G&nbsp;&nbsp;H&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;Q&nbsp;&nbsp;H&nbsp;&nbsp;I&nbsp;&nbsp;V&nbsp;&nbsp;*&nbsp;&nbsp;D&nbsp;&nbsp;V&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gacagtcatatatatgtcccacattgctaaaaacactgttAGGATACATCATTtagctaa</div>
+<div class="sep">60189&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CTGTCAGTATATATACAGGGTGTAACGATTTTTGTGACAATCCTATGTAGTAAATCGATT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;M&nbsp;&nbsp;S&nbsp;&nbsp;H&nbsp;&nbsp;I&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;N&nbsp;&nbsp;T&nbsp;&nbsp;V&nbsp;&nbsp;R&nbsp;&nbsp;I&nbsp;&nbsp;H&nbsp;&nbsp;H&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q&nbsp;&nbsp;S&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;C&nbsp;&nbsp;P&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;K</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D&nbsp;&nbsp;S&nbsp;&nbsp;H&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;P&nbsp;&nbsp;H&nbsp;&nbsp;C&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;H&nbsp;&nbsp;C&nbsp;&nbsp;*&nbsp;&nbsp;D&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;*&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aaagtgaaaattggttgtttttgcgttatatgTTGCGTTAATTTGTTCTTCCAGTTCCAC</div>
+<div class="sep">60249&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTTCACTTTTAACCAACAAAAACGCAATATACAACGCAATTAAACAAGAAGGTCAAGGTG</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;C&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;E&nbsp;&nbsp;N&nbsp;&nbsp;W&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;Y&nbsp;&nbsp;M&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;V&nbsp;&nbsp;P&nbsp;&nbsp;Q</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;G&nbsp;&nbsp;C&nbsp;&nbsp;F&nbsp;&nbsp;C&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;C&nbsp;&nbsp;C&nbsp;&nbsp;V&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;Q&nbsp;&nbsp;F&nbsp;&nbsp;H&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AGCCATGAGATCATTGGCTGTCTGTACCGACCAGTACAAAGTGACGTTATTGAGTTTttg</div>
+<div class="sep">60309&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TCGGTACTCTAGTAACCGACAGACATGGCTGGTCATGTTTCACTGCAATAACTCAAAAAC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;M&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;V&nbsp;&nbsp;C&nbsp;&nbsp;T&nbsp;&nbsp;D&nbsp;&nbsp;Q&nbsp;&nbsp;Y&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;W&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P&nbsp;&nbsp;*&nbsp;&nbsp;D&nbsp;&nbsp;H&nbsp;&nbsp;W&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;P&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;K&nbsp;&nbsp;*&nbsp;&nbsp;R&nbsp;&nbsp;Y&nbsp;&nbsp;*&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;G</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;H&nbsp;&nbsp;E&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;G&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;R&nbsp;&nbsp;P&nbsp;&nbsp;V&nbsp;&nbsp;Q&nbsp;&nbsp;S&nbsp;&nbsp;D&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;E&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gcattaattcatgagaaagacttggtttgaaccaatAAGCATGCTCTATTGTGAACGAGA</div>
+<div class="sep">60369&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CGTAATTAAGTACTCTTTCTGAACCAAACTTGGTTATTCGTACGAGATAACACTTGCTCT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;M&nbsp;&nbsp;R&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;W&nbsp;&nbsp;F&nbsp;&nbsp;E&nbsp;&nbsp;P&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;M&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;C&nbsp;&nbsp;E&nbsp;&nbsp;R&nbsp;&nbsp;D&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;*&nbsp;&nbsp;E&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;Q&nbsp;&nbsp;*&nbsp;&nbsp;A&nbsp;&nbsp;C&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;V&nbsp;&nbsp;N&nbsp;&nbsp;E&nbsp;&nbsp;M</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;H&nbsp;&nbsp;E&nbsp;&nbsp;K&nbsp;&nbsp;D&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;*&nbsp;&nbsp;T&nbsp;&nbsp;N&nbsp;&nbsp;K&nbsp;&nbsp;H&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;T&nbsp;&nbsp;R&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tggaacttcattaatatgcatgatatagttTCGAAGACTCTTTTTATCTGTTGCAGTGTT</div>
+<div class="sep">60429&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACCTTGAAGTAATTATACGTACTATATCAAAGCTTCTGAGAAAAATAGACAACGTCACAA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;C&nbsp;&nbsp;M&nbsp;&nbsp;I&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;R&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;A&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;*&nbsp;&nbsp;Y&nbsp;&nbsp;A&nbsp;&nbsp;*&nbsp;&nbsp;Y&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;E&nbsp;&nbsp;D&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;Y&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;C&nbsp;&nbsp;L</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;N&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;N&nbsp;&nbsp;M&nbsp;&nbsp;H&nbsp;&nbsp;D&nbsp;&nbsp;I&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;C&nbsp;&nbsp;C&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TAGAGAagcgccacgttgtgttgccaacaagtagaagaattgtttggagacatgggtcat</div>
+<div class="sep">60489&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ATCTCTTCGCGGTGCAACACAACGGTTGTTCATCTTCTTAACAAACCTCTGTACCCAGTA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;E&nbsp;&nbsp;A&nbsp;&nbsp;P&nbsp;&nbsp;R&nbsp;&nbsp;C&nbsp;&nbsp;V&nbsp;&nbsp;A&nbsp;&nbsp;N&nbsp;&nbsp;K&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;N&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;T&nbsp;&nbsp;W&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;K&nbsp;&nbsp;R&nbsp;&nbsp;H&nbsp;&nbsp;V&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;R&nbsp;&nbsp;I&nbsp;&nbsp;V&nbsp;&nbsp;W&nbsp;&nbsp;R&nbsp;&nbsp;H&nbsp;&nbsp;G&nbsp;&nbsp;S&nbsp;&nbsp;S</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;C&nbsp;&nbsp;C&nbsp;&nbsp;Q&nbsp;&nbsp;Q&nbsp;&nbsp;V&nbsp;&nbsp;E&nbsp;&nbsp;E&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;G&nbsp;&nbsp;D&nbsp;&nbsp;M&nbsp;&nbsp;G&nbsp;&nbsp;H&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cagtattgcatttataaatgtgctaaAGCAaaagttttgtttccatttccctgtGATTAG</div>
+<div class="sep">60549&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GTCATAACGTAAATATTTACACGATTTCGTTTTCAAAACAAAGGTAAAGGGACACTAATC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;A&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;N&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;Q&nbsp;&nbsp;K&nbsp;&nbsp;F&nbsp;&nbsp;C&nbsp;&nbsp;F&nbsp;&nbsp;H&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;R&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;M&nbsp;&nbsp;C&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;L&nbsp;&nbsp;E</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q&nbsp;&nbsp;Y&nbsp;&nbsp;C&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;K&nbsp;&nbsp;C&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;C&nbsp;&nbsp;D&nbsp;&nbsp;*&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AACACAGCTcgaaaatatgtttgtaagatttttttttttactcgagagcttttcgAATGT</div>
+<div class="sep">60609&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTGTGTCGAGCTTTTATACAAACATTCTAAAAAAAAAAATGAGCTCTCGAAAAGCTTACA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;Q&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;N&nbsp;&nbsp;M&nbsp;&nbsp;F&nbsp;&nbsp;V&nbsp;&nbsp;R&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;V&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;D&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;Y&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;A&nbsp;&nbsp;F&nbsp;&nbsp;R&nbsp;&nbsp;M&nbsp;&nbsp;W</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;T&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;K&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;C&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;T&nbsp;&nbsp;R&nbsp;&nbsp;E&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;E&nbsp;&nbsp;C&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GGAAATTGTGAAATCTGGATTTTATGGTGACAGCCACCTCACTAATAGCAAAACTCTCAC</div>
+<div class="sep">60669&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CCTTTAACACTTTAGACCTAAAATACCACTGTCGGTGGAGTGATTATCGTTTTGAGAGTG</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E&nbsp;&nbsp;I&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;G&nbsp;&nbsp;F&nbsp;&nbsp;Y&nbsp;&nbsp;G&nbsp;&nbsp;D&nbsp;&nbsp;S&nbsp;&nbsp;H&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;D&nbsp;&nbsp;F&nbsp;&nbsp;M&nbsp;&nbsp;V&nbsp;&nbsp;T&nbsp;&nbsp;A&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;L</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G&nbsp;&nbsp;N&nbsp;&nbsp;C&nbsp;&nbsp;E&nbsp;&nbsp;I&nbsp;&nbsp;W&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;W&nbsp;&nbsp;*&nbsp;&nbsp;Q&nbsp;&nbsp;P&nbsp;&nbsp;P&nbsp;&nbsp;H&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;Q&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;H&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TAACAACAGGAGCTTCTGAATCATATAGCCATTTgtactgaaatttttttttagcattac</div>
+<div class="sep">60729&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ATTGTTGTCCTCGAAGACTTAGTATATCGGTAAACATGACTTTAAAAAAAAATCGTAATG</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;N&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;*&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;*&nbsp;&nbsp;P&nbsp;&nbsp;F&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;T&nbsp;&nbsp;G&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;E&nbsp;&nbsp;S&nbsp;&nbsp;Y&nbsp;&nbsp;S&nbsp;&nbsp;H&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;*&nbsp;&nbsp;N&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;L</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;Q&nbsp;&nbsp;Q&nbsp;&nbsp;E&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;H&nbsp;&nbsp;I&nbsp;&nbsp;A&nbsp;&nbsp;I&nbsp;&nbsp;C&nbsp;&nbsp;T&nbsp;&nbsp;E&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;*&nbsp;&nbsp;H&nbsp;&nbsp;Y&nbsp;&nbsp;</div>
+</div><div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tattttatttaaataaaaaaaaaaattggccaaAAATGTATTATCAGTGAATCCGTATCt</div>
+<div class="sep">60789&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ATAAAATAAATTTATTTTTTTTTTTAACCGGTTTTTACATAATAGTCACTTAGGCATAGA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;K&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;N&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;N&nbsp;&nbsp;P&nbsp;&nbsp;Y&nbsp;&nbsp;L&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;Y&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;N&nbsp;&nbsp;W&nbsp;&nbsp;P&nbsp;&nbsp;K&nbsp;&nbsp;M&nbsp;&nbsp;Y&nbsp;&nbsp;Y&nbsp;&nbsp;Q&nbsp;&nbsp;*&nbsp;&nbsp;I&nbsp;&nbsp;R&nbsp;&nbsp;I&nbsp;&nbsp;*</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Y&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;*&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;G&nbsp;&nbsp;Q&nbsp;&nbsp;K&nbsp;&nbsp;C&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;E&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aacacttctcaaatgatctttATGTTTCTGTCAAAG<span class="exon" id="Exon4">GCTGACCGAGGTCACCGGAGGTCA</span></div>
+<div class="sep">60849&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTGTGAAGAGTTTACTAGAAATACAAAGACAGTTTCCGACTGGCTCCAGTGGCCTCCAGT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;C&nbsp;&nbsp;F&nbsp;&nbsp;C&nbsp;&nbsp;Q&nbsp;&nbsp;R&nbsp;<span class="frame">&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;E&nbsp;&nbsp;V&nbsp;&nbsp;T&nbsp;&nbsp;G&nbsp;&nbsp;G&nbsp;&nbsp;H&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;D&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;G&nbsp;&nbsp;*&nbsp;&nbsp;P&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;E&nbsp;&nbsp;V&nbsp;&nbsp;T</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N&nbsp;&nbsp;T&nbsp;&nbsp;S&nbsp;&nbsp;Q&nbsp;&nbsp;M&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;M&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;A&nbsp;&nbsp;D&nbsp;&nbsp;R&nbsp;&nbsp;G&nbsp;&nbsp;H&nbsp;&nbsp;R&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">CACCACAGAGCCCGAGCTCCTTTTTTCAGGAGGGAAAGACCCATCAGCTTACAAAGAATG</span></div>
+<div class="sep">60909&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GTGGTGTCTCGGGCTCGAGGAAAAAAGTCCTCCCTTTCTGGGTAGTCGAATGTTTCTTAC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;T&nbsp;&nbsp;T&nbsp;&nbsp;E&nbsp;&nbsp;P&nbsp;&nbsp;E&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;G&nbsp;&nbsp;G&nbsp;&nbsp;K&nbsp;&nbsp;D&nbsp;&nbsp;P&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;Y&nbsp;&nbsp;K&nbsp;&nbsp;E&nbsp;&nbsp;W&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P&nbsp;&nbsp;Q&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;Q&nbsp;&nbsp;E&nbsp;&nbsp;G&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;H&nbsp;&nbsp;Q&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;K&nbsp;&nbsp;N&nbsp;&nbsp;G</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;H&nbsp;&nbsp;H&nbsp;&nbsp;R&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;A&nbsp;&nbsp;P&nbsp;&nbsp;F&nbsp;&nbsp;F&nbsp;&nbsp;R&nbsp;&nbsp;R&nbsp;&nbsp;E&nbsp;&nbsp;R&nbsp;&nbsp;P&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;R&nbsp;&nbsp;M&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">GCTGGCGTCCCTGCCGCAAAACCCAGATGTGATTTCTCACTCTCTGGAGTCCCTGCACGA</span></div>
+<div class="sep">60969&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CGACCGCAGGGACGGCGTTTTGGGTCTACACTAAAGAGTGAGAGACCTCAGGGACGTGCT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;Q&nbsp;&nbsp;N&nbsp;&nbsp;P&nbsp;&nbsp;D&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;H&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;E&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;R&nbsp;&nbsp;P&nbsp;&nbsp;C&nbsp;&nbsp;R&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;Q&nbsp;&nbsp;M&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;W&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;C&nbsp;&nbsp;T&nbsp;&nbsp;S</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;G&nbsp;&nbsp;V&nbsp;&nbsp;P&nbsp;&nbsp;A&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;P&nbsp;&nbsp;R&nbsp;&nbsp;C&nbsp;&nbsp;D&nbsp;&nbsp;F&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;G&nbsp;&nbsp;V&nbsp;&nbsp;P&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">GCTGATCCCCACCAAATACCCAGTGCGCAAACACATGCGCCAAGCCATCCACGACTACAT</span></div>
+<div class="sep">61029&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CGACTAGGGGTGGTTTATGGGTCACGCGTTTGTGTACGCGGTTCGGTAGGTGCTGATGTA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;P&nbsp;&nbsp;T&nbsp;&nbsp;K&nbsp;&nbsp;Y&nbsp;&nbsp;P&nbsp;&nbsp;V&nbsp;&nbsp;R&nbsp;&nbsp;K&nbsp;&nbsp;H&nbsp;&nbsp;M&nbsp;&nbsp;R&nbsp;&nbsp;Q&nbsp;&nbsp;A&nbsp;&nbsp;I&nbsp;&nbsp;H&nbsp;&nbsp;D&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;P&nbsp;&nbsp;N&nbsp;&nbsp;T&nbsp;&nbsp;Q&nbsp;&nbsp;C&nbsp;&nbsp;A&nbsp;&nbsp;N&nbsp;&nbsp;T&nbsp;&nbsp;C&nbsp;&nbsp;A&nbsp;&nbsp;K&nbsp;&nbsp;P&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;T&nbsp;&nbsp;T&nbsp;&nbsp;S</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;D&nbsp;&nbsp;P&nbsp;&nbsp;H&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;P&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;H&nbsp;&nbsp;A&nbsp;&nbsp;P&nbsp;&nbsp;S&nbsp;&nbsp;H&nbsp;&nbsp;P&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">CCTGGAAAATTCCCTTTGGAGGAACTGCACCGACCCCTGCACTAATGGCGTCAAAACCAA</span></div>
+<div class="sep">61089&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GGACCTTTTAAGGGAAACCTCCTTGACGTGGCTGGGGACGTGATTACCGCAGTTTTGGTT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;W&nbsp;&nbsp;R&nbsp;&nbsp;N&nbsp;&nbsp;C&nbsp;&nbsp;T&nbsp;&nbsp;D&nbsp;&nbsp;P&nbsp;&nbsp;C&nbsp;&nbsp;T&nbsp;&nbsp;N&nbsp;&nbsp;G&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;N&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;P&nbsp;&nbsp;F&nbsp;&nbsp;G&nbsp;&nbsp;G&nbsp;&nbsp;T&nbsp;&nbsp;A&nbsp;&nbsp;P&nbsp;&nbsp;T&nbsp;&nbsp;P&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;M&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;P&nbsp;&nbsp;T</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P&nbsp;&nbsp;G&nbsp;&nbsp;K&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;E&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;R&nbsp;&nbsp;P&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;*&nbsp;&nbsp;W&nbsp;&nbsp;R&nbsp;&nbsp;Q&nbsp;&nbsp;N&nbsp;&nbsp;Q&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">CCCAAACAATCCATGTGTCTGCACTTGCCACAACAAACCCGGAATCACACCAGACTGTTG</span></div>
+<div class="sep">61149&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GGGTTTGTTAGGTACACAGACGTGAACGGTGTTGTTTGGGCCTTAGTGTGGTCTGACAAC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;P&nbsp;&nbsp;N&nbsp;&nbsp;N&nbsp;&nbsp;P&nbsp;&nbsp;C&nbsp;&nbsp;V&nbsp;&nbsp;C&nbsp;&nbsp;T&nbsp;&nbsp;C&nbsp;&nbsp;H&nbsp;&nbsp;N&nbsp;&nbsp;K&nbsp;&nbsp;P&nbsp;&nbsp;G&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;P&nbsp;&nbsp;D&nbsp;&nbsp;C&nbsp;&nbsp;C&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;H&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;T&nbsp;&nbsp;T&nbsp;&nbsp;N&nbsp;&nbsp;P&nbsp;&nbsp;E&nbsp;&nbsp;S&nbsp;&nbsp;H&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;V&nbsp;&nbsp;A</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P&nbsp;&nbsp;K&nbsp;&nbsp;Q&nbsp;&nbsp;S&nbsp;&nbsp;M&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;L&nbsp;&nbsp;P&nbsp;&nbsp;Q&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;R&nbsp;&nbsp;N&nbsp;&nbsp;H&nbsp;&nbsp;T&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">CCCGTCCAAACGTGGACTCTCTCGGGTGCAGGTCACGGTCGTTAAGGCTCAAGATCTTTG</span></div>
+<div class="sep">61209&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GGGCAGGTTTGCACCTGAGAGAGCCCACGTCCAGTGCCAGCAATTCCGAGTTCTAGAAAC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;P&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;R&nbsp;&nbsp;G&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;V&nbsp;&nbsp;Q&nbsp;&nbsp;V&nbsp;&nbsp;T&nbsp;&nbsp;V&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;A&nbsp;&nbsp;Q&nbsp;&nbsp;D&nbsp;&nbsp;L&nbsp;&nbsp;W&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;P&nbsp;&nbsp;N&nbsp;&nbsp;V&nbsp;&nbsp;D&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;C&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;G</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P&nbsp;&nbsp;V&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;W&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;G&nbsp;&nbsp;A&nbsp;&nbsp;G&nbsp;&nbsp;H&nbsp;&nbsp;G&nbsp;&nbsp;R&nbsp;&nbsp;*&nbsp;&nbsp;G&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">GGGTGACACAACCACAGCGACCGATGGCTATGTTAAAGTGTTCGACAAAAATAACGTGAA</span></div>
+<div class="sep">61269&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CCCACTGTGTTGGTGTCGCTGGCTACCGATACAATTTCACAAGCTGTTTTTATTGCACTT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;G&nbsp;&nbsp;D&nbsp;&nbsp;T&nbsp;&nbsp;T&nbsp;&nbsp;T&nbsp;&nbsp;A&nbsp;&nbsp;T&nbsp;&nbsp;D&nbsp;&nbsp;G&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;D&nbsp;&nbsp;K&nbsp;&nbsp;N&nbsp;&nbsp;N&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V&nbsp;&nbsp;T&nbsp;&nbsp;Q&nbsp;&nbsp;P&nbsp;&nbsp;Q&nbsp;&nbsp;R&nbsp;&nbsp;P&nbsp;&nbsp;M&nbsp;&nbsp;A&nbsp;&nbsp;M&nbsp;&nbsp;L&nbsp;&nbsp;K&nbsp;&nbsp;C&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;K&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;*&nbsp;&nbsp;R</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;G&nbsp;&nbsp;*&nbsp;&nbsp;H&nbsp;&nbsp;N&nbsp;&nbsp;H&nbsp;&nbsp;S&nbsp;&nbsp;D&nbsp;&nbsp;R&nbsp;&nbsp;W&nbsp;&nbsp;L&nbsp;&nbsp;C&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;V&nbsp;&nbsp;R&nbsp;&nbsp;Q&nbsp;&nbsp;K&nbsp;&nbsp;*&nbsp;&nbsp;R&nbsp;&nbsp;E&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">GATTGGATCCACAAATATGATACCGAATAACAATTCACCCTACTGGGGGCAAACCTTCGA</span></div>
+<div class="sep">61329&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CTAACCTAGGTGTTTATACTATGGCTTATTGTTAAGTGGGATGACCCCCGTTTGGAAGCT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;I&nbsp;&nbsp;G&nbsp;&nbsp;S&nbsp;&nbsp;T&nbsp;&nbsp;N&nbsp;&nbsp;M&nbsp;&nbsp;I&nbsp;&nbsp;P&nbsp;&nbsp;N&nbsp;&nbsp;N&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;Y&nbsp;&nbsp;W&nbsp;&nbsp;G&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;F&nbsp;&nbsp;D&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;D&nbsp;&nbsp;P&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;*&nbsp;&nbsp;Y&nbsp;&nbsp;R&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;H&nbsp;&nbsp;P&nbsp;&nbsp;T&nbsp;&nbsp;G&nbsp;&nbsp;G&nbsp;&nbsp;K&nbsp;&nbsp;P&nbsp;&nbsp;S&nbsp;&nbsp;I</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D&nbsp;&nbsp;W&nbsp;&nbsp;I&nbsp;&nbsp;H&nbsp;&nbsp;K&nbsp;&nbsp;Y&nbsp;&nbsp;D&nbsp;&nbsp;T&nbsp;&nbsp;E&nbsp;&nbsp;*&nbsp;&nbsp;Q&nbsp;&nbsp;F&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;A&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">TCTGGGTGATGTCATCCTGGCAGAGAATGACAATATCAAACTGGAGGTGTGGGATGAAGA</span></div>
+<div class="sep">61389&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AGACCCACTACAGTAGGACCGTCTCTTACTGTTATAGTTTGACCTCCACACCCTACTTCT</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;D&nbsp;&nbsp;V&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;E&nbsp;&nbsp;N&nbsp;&nbsp;D&nbsp;&nbsp;N&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;V&nbsp;&nbsp;W&nbsp;&nbsp;D&nbsp;&nbsp;E&nbsp;&nbsp;D&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;V&nbsp;&nbsp;M&nbsp;&nbsp;S&nbsp;&nbsp;S&nbsp;&nbsp;W&nbsp;&nbsp;Q&nbsp;&nbsp;R&nbsp;&nbsp;M&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;W&nbsp;&nbsp;R&nbsp;&nbsp;C&nbsp;&nbsp;G&nbsp;&nbsp;M&nbsp;&nbsp;K&nbsp;&nbsp;T</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;G&nbsp;&nbsp;*&nbsp;&nbsp;C&nbsp;&nbsp;H&nbsp;&nbsp;P&nbsp;&nbsp;G&nbsp;&nbsp;R&nbsp;&nbsp;E&nbsp;&nbsp;*&nbsp;&nbsp;Q&nbsp;&nbsp;Y&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;G&nbsp;&nbsp;G&nbsp;&nbsp;V&nbsp;&nbsp;G&nbsp;&nbsp;*&nbsp;&nbsp;R&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">CAGTAAATGGGATGACGATTTGTTGGGAACCTGTCAGGTAGCCATAAAAGTAGATCAGAG</span></div>
+<div class="sep">61449&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GTCATTTACCCTACTGCTAAACAACCCTTGGACAGTCCATCGGTATTTTCATCTAGTCTC</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;W&nbsp;&nbsp;D&nbsp;&nbsp;D&nbsp;&nbsp;D&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;G&nbsp;&nbsp;T&nbsp;&nbsp;C&nbsp;&nbsp;Q&nbsp;&nbsp;V&nbsp;&nbsp;A&nbsp;&nbsp;I&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;D&nbsp;&nbsp;Q&nbsp;&nbsp;S&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V&nbsp;&nbsp;N&nbsp;&nbsp;G&nbsp;&nbsp;M&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;C&nbsp;&nbsp;W&nbsp;&nbsp;E&nbsp;&nbsp;P&nbsp;&nbsp;V&nbsp;&nbsp;R&nbsp;&nbsp;*&nbsp;&nbsp;P&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;*&nbsp;&nbsp;I&nbsp;&nbsp;R&nbsp;&nbsp;V</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Q&nbsp;&nbsp;*&nbsp;&nbsp;M&nbsp;&nbsp;G&nbsp;&nbsp;*&nbsp;&nbsp;R&nbsp;&nbsp;F&nbsp;&nbsp;V&nbsp;&nbsp;G&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;S&nbsp;&nbsp;G&nbsp;&nbsp;S&nbsp;&nbsp;H&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;S&nbsp;&nbsp;E&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">TCAGACCTACAATTTCTGCAGTTTGAATCATGGTTTGCTCTATTACAATACAAAAGTGAC</span></div>
+<div class="sep">61509&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AGTCTGGATGTTAAAGACGTCAAACTTAGTACCAAACGAGATAATGTTATGTTTTCACTG</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;Y&nbsp;&nbsp;N&nbsp;&nbsp;F&nbsp;&nbsp;C&nbsp;&nbsp;S&nbsp;&nbsp;L&nbsp;&nbsp;N&nbsp;&nbsp;H&nbsp;&nbsp;G&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;Y&nbsp;&nbsp;N&nbsp;&nbsp;T&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;T&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R&nbsp;&nbsp;P&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;V&nbsp;&nbsp;*&nbsp;&nbsp;I&nbsp;&nbsp;M&nbsp;&nbsp;V&nbsp;&nbsp;C&nbsp;&nbsp;S&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;Q&nbsp;&nbsp;K&nbsp;&nbsp;*&nbsp;&nbsp;H</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;D&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;F&nbsp;&nbsp;E&nbsp;&nbsp;S&nbsp;&nbsp;W&nbsp;&nbsp;F&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;Y&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;D&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">ATGCGCCCCCGGTTTGGCTGGCACCTATTGTGAAAAGTATGTGGGTTCCCCCATGAACTT</span></div>
+<div class="sep">61569&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TACGCGGGGGCCAAACCGACCGTGGATAACACTTTTCATACACCCAAGGGGGTACTTGAA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;C&nbsp;&nbsp;A&nbsp;&nbsp;P&nbsp;&nbsp;G&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;G&nbsp;&nbsp;T&nbsp;&nbsp;Y&nbsp;&nbsp;C&nbsp;&nbsp;E&nbsp;&nbsp;K&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;G&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;M&nbsp;&nbsp;N&nbsp;&nbsp;F&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;P&nbsp;&nbsp;P&nbsp;&nbsp;V&nbsp;&nbsp;W&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;P&nbsp;&nbsp;I&nbsp;&nbsp;V&nbsp;&nbsp;K&nbsp;&nbsp;S&nbsp;&nbsp;M&nbsp;&nbsp;W&nbsp;&nbsp;V&nbsp;&nbsp;P&nbsp;&nbsp;P&nbsp;&nbsp;*&nbsp;&nbsp;T&nbsp;&nbsp;F</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;R&nbsp;&nbsp;P&nbsp;&nbsp;R&nbsp;&nbsp;F&nbsp;&nbsp;G&nbsp;&nbsp;W&nbsp;&nbsp;H&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;C&nbsp;&nbsp;G&nbsp;&nbsp;F&nbsp;&nbsp;P&nbsp;&nbsp;H&nbsp;&nbsp;E&nbsp;&nbsp;L&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">TCACCTGGAGAAGGTTTACGTGTCTCGAAATGCACGACCTGTGCCACCAGAAATACTTTT</span></div>
+<div class="sep">61629&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AGTGGACCTCTTCCAAATGCACAGAGCTTTACGTGCTGGACACGGTGGTCTTTATGAAAA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;H&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;K&nbsp;&nbsp;V&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;R&nbsp;&nbsp;N&nbsp;&nbsp;A&nbsp;&nbsp;R&nbsp;&nbsp;P&nbsp;&nbsp;V&nbsp;&nbsp;P&nbsp;&nbsp;P&nbsp;&nbsp;E&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;W&nbsp;&nbsp;R&nbsp;&nbsp;R&nbsp;&nbsp;F&nbsp;&nbsp;T&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;E&nbsp;&nbsp;M&nbsp;&nbsp;H&nbsp;&nbsp;D&nbsp;&nbsp;L&nbsp;&nbsp;C&nbsp;&nbsp;H&nbsp;&nbsp;Q&nbsp;&nbsp;K&nbsp;&nbsp;Y&nbsp;&nbsp;F&nbsp;&nbsp;*</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;P&nbsp;&nbsp;G&nbsp;&nbsp;E&nbsp;&nbsp;G&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;V&nbsp;&nbsp;S&nbsp;&nbsp;K&nbsp;&nbsp;C&nbsp;&nbsp;T&nbsp;&nbsp;T&nbsp;&nbsp;C&nbsp;&nbsp;A&nbsp;&nbsp;T&nbsp;&nbsp;R&nbsp;&nbsp;N&nbsp;&nbsp;T&nbsp;&nbsp;F&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">AAGCCATGGAGTGCTTCTGGACAGACTTTACGTATATCACAAGACAAATTACAATAATAC</span></div>
+<div class="sep">61689&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TTCGGTACCTCACGAAGACCTGTCTGAAATGCATATAGTGTTCTGTTTAATGTTATTATG</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;S&nbsp;&nbsp;H&nbsp;&nbsp;G&nbsp;&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;D&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;Y&nbsp;&nbsp;H&nbsp;&nbsp;K&nbsp;&nbsp;T&nbsp;&nbsp;N&nbsp;&nbsp;Y&nbsp;&nbsp;N&nbsp;&nbsp;N&nbsp;&nbsp;T&nbsp;</span></div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;M&nbsp;&nbsp;E&nbsp;&nbsp;C&nbsp;&nbsp;F&nbsp;&nbsp;W&nbsp;&nbsp;T&nbsp;&nbsp;D&nbsp;&nbsp;F&nbsp;&nbsp;T&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;R&nbsp;&nbsp;Q&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;Q</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;K&nbsp;&nbsp;P&nbsp;&nbsp;W&nbsp;&nbsp;S&nbsp;&nbsp;A&nbsp;&nbsp;S&nbsp;&nbsp;G&nbsp;&nbsp;Q&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;R&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;Q&nbsp;&nbsp;D&nbsp;&nbsp;K&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;*&nbsp;&nbsp;Y&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="exon">AGTTTTGTAG</span>ATACTTTGGCTCTGGATGAGATTATGTGGCTATTTGCAATATATCCTGAT</div>
+<div class="sep">61749&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TCAAAACATCTATGAAACCGAGACCTACTCTAATACACCGATAAACGTTATATAGGACTA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="frame">&nbsp;V&nbsp;&nbsp;L&nbsp;&nbsp;*&nbsp;&nbsp;</span>I&nbsp;&nbsp;L&nbsp;&nbsp;W&nbsp;&nbsp;L&nbsp;&nbsp;W&nbsp;&nbsp;M&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;C&nbsp;&nbsp;G&nbsp;&nbsp;Y&nbsp;&nbsp;L&nbsp;&nbsp;Q&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;C&nbsp;&nbsp;R&nbsp;&nbsp;Y&nbsp;&nbsp;F&nbsp;&nbsp;G&nbsp;&nbsp;S&nbsp;&nbsp;G&nbsp;&nbsp;*&nbsp;&nbsp;D&nbsp;&nbsp;Y&nbsp;&nbsp;V&nbsp;&nbsp;A&nbsp;&nbsp;I&nbsp;&nbsp;C&nbsp;&nbsp;N&nbsp;&nbsp;I&nbsp;&nbsp;S&nbsp;&nbsp;*&nbsp;&nbsp;F</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;F&nbsp;&nbsp;V&nbsp;&nbsp;D&nbsp;&nbsp;T&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;L&nbsp;&nbsp;D&nbsp;&nbsp;E&nbsp;&nbsp;I&nbsp;&nbsp;M&nbsp;&nbsp;W&nbsp;&nbsp;L&nbsp;&nbsp;F&nbsp;&nbsp;A&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;P&nbsp;&nbsp;D&nbsp;&nbsp;</div>
+<div class="genome">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TCTTGCTTGTATTTATTACTATACGATTATTATATTTAATCTAATTCTTGCATAATACAT</div>
+<div class="sep">61809&nbsp;---------+---------+---------+---------+---------+---------+</div>
+<div class="genome rev">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AGAACGAACATAAATAATGATATGCTAATAATATAAATTAGATTAAGAACGTATTATGTA</div>
+<div class="transl f1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;C&nbsp;&nbsp;I&nbsp;&nbsp;Y&nbsp;&nbsp;Y&nbsp;&nbsp;Y&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;F&nbsp;&nbsp;N&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;L&nbsp;&nbsp;A&nbsp;&nbsp;*&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;</div>
+<div class="transl f2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;V&nbsp;&nbsp;F&nbsp;&nbsp;I&nbsp;&nbsp;T&nbsp;&nbsp;I&nbsp;&nbsp;R&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;L&nbsp;&nbsp;I&nbsp;&nbsp;*&nbsp;&nbsp;F&nbsp;&nbsp;L&nbsp;&nbsp;H&nbsp;&nbsp;N&nbsp;&nbsp;T&nbsp;&nbsp;Y</div>
+<div class="transl f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;L&nbsp;&nbsp;Y&nbsp;&nbsp;D&nbsp;&nbsp;Y&nbsp;&nbsp;Y&nbsp;&nbsp;I&nbsp;&nbsp;*&nbsp;&nbsp;S&nbsp;&nbsp;N&nbsp;&nbsp;S&nbsp;&nbsp;C&nbsp;&nbsp;I&nbsp;&nbsp;I&nbsp;&nbsp;H&nbsp;&nbsp;</div>
+
+	  </div>
+	</div>
+</body>
+</html>
+  

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 14:11:10, Fri Jan 10, 2020 -->
+<gene>
+	<exon>
+		<chromosome>
+			KV953400.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				33434
+			</_spliced_from>
+			<_spliced_to>
+				33844
+			</_spliced_to>
+			<from>
+				33434
+			</from>
+			<to>
+				33844
+			</to>
+		</template>
+		<warnings>
+			exon3
+		</warnings>
+	</exon>
+</gene>

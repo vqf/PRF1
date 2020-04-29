@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 14:6:27, Wed Jan 23, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			chrUn_DS211767v1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				471
+			</_spliced_from>
+			<_spliced_to>
+				1547
+			</_spliced_to>
+			<from>
+				471
+			</from>
+			<to>
+				1547
+			</to>
+		</template>
+		<warnings>
+			exon2 con frameshift de libro
+		</warnings>
+	</exon>
+</gene>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 11:30:20, Thu Jan 24, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			JH835516
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				330640
+			</_spliced_from>
+			<_spliced_to>
+				330114
+			</_spliced_to>
+			<from>
+				330640
+			</from>
+			<to>
+				330116
+			</to>
+		</template>
+	</exon>
+	<exon>
+		<chromosome>
+			JH835516
+		</chromosome>
+		<frame>
+			2
+		</frame>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				327655
+			</_spliced_from>
+			<_spliced_to>
+				326527
+			</_spliced_to>
+			<from>
+				327657
+			</from>
+			<to>
+				326527
+			</to>
+		</template>
+	</exon>
+</gene>

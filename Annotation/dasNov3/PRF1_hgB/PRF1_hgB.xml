@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 12:0:12, Thu Jan 24, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			JH570374
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				7934338
+			</_spliced_from>
+			<_spliced_to>
+				7933800
+			</_spliced_to>
+			<from>
+				7934338
+			</from>
+			<to>
+				7933802
+			</to>
+		</template>
+	</exon>
+	<exon>
+		<chromosome>
+			JH570374
+		</chromosome>
+		<frame>
+			2
+		</frame>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				7932660
+			</_spliced_from>
+			<_spliced_to>
+				7931532
+			</_spliced_to>
+			<from>
+				7932662
+			</from>
+			<to>
+				7931532
+			</to>
+		</template>
+	</exon>
+</gene>

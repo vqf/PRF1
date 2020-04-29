@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 12:30:55, Tue Feb 11, 2020 -->
+<gene>
+	<exon>
+		<chromosome>
+			NC_041730.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				86648836
+			</_spliced_from>
+			<_spliced_to>
+				86649374
+			</_spliced_to>
+			<from>
+				86648836
+			</from>
+			<to>
+				86649372
+			</to>
+		</template>
+	</exon>
+	<exon>
+		<chromosome>
+			NC_041730.1
+		</chromosome>
+		<frame>
+			2
+		</frame>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				86650455
+			</_spliced_from>
+			<_spliced_to>
+				86651586
+			</_spliced_to>
+			<from>
+				86650453
+			</from>
+			<to>
+				86651586
+			</to>
+		</template>
+	</exon>
+</gene>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 19:5:51, Wed Feb 20, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			NW_012221617.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				1962780
+			</_spliced_from>
+			<_spliced_to>
+				1962448
+			</_spliced_to>
+			<from>
+				1962780
+			</from>
+			<to>
+				1962448
+			</to>
+		</template>
+		<warnings>
+			no primer M, NCBI alarga el mRNA, no entiendo
+		</warnings>
+	</exon>
+</gene>

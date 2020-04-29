@@ -1,0 +1,3 @@
+Exon 1: initial methionine lost
+Exon 2: frameshift
+Exon 4: frameshift

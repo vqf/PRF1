@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 17:11:26, Wed Feb 6, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			NW_006908387.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				70
+			</_spliced_from>
+			<_spliced_to>
+				1059
+			</_spliced_to>
+			<from>
+				70
+			</from>
+			<to>
+				1059
+			</to>
+		</template>
+		<warnings>
+			retrotranscrito?
+		</warnings>
+	</exon>
+</gene>

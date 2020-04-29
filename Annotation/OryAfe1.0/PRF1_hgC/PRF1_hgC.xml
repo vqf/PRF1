@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 19:3:3, Wed Jan 23, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			scaffold00070
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				6776564
+			</_spliced_from>
+			<_spliced_to>
+				6777376
+			</_spliced_to>
+			<from>
+				6776564
+			</from>
+			<to>
+				6777376
+			</to>
+		</template>
+		<warnings>
+			stop codons
+		</warnings>
+	</exon>
+</gene>

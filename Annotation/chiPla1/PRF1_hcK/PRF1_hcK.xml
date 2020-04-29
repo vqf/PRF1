@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 16:48:45, Tue Feb 19, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			CM013004.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				239788
+			</_spliced_from>
+			<_spliced_to>
+				238172
+			</_spliced_to>
+			<from>
+				239788
+			</from>
+			<to>
+				238172
+			</to>
+		</template>
+	</exon>
+</gene>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 18:44:44, Fri Jan 18, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			scaffold_26954
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				5995
+			</_spliced_from>
+			<_spliced_to>
+				5460
+			</_spliced_to>
+			<from>
+				5995
+			</from>
+			<to>
+				5462
+			</to>
+		</template>
+		<warnings>
+			Query does not start at 1
+		</warnings>
+	</exon>
+	<exon>
+		<chromosome>
+			scaffold_26954
+		</chromosome>
+		<frame>
+			2
+		</frame>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				3092
+			</_spliced_from>
+			<_spliced_to>
+				1964
+			</_spliced_to>
+			<from>
+				3094
+			</from>
+			<to>
+				1964
+			</to>
+		</template>
+	</exon>
+</gene>

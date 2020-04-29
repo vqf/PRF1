@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 13:4:17, Mon Feb 18, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			LTYT01009838.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				30995
+			</_spliced_from>
+			<_spliced_to>
+				30468
+			</_spliced_to>
+			<from>
+				30995
+			</from>
+			<to>
+				30468
+			</to>
+		</template>
+		<warnings>
+			exon1
+		</warnings>
+	</exon>
+</gene>

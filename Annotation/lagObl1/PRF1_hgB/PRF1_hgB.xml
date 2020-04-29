@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 20:7:59, Tue Feb 5, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			NW_020837981.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				13965717
+			</_spliced_from>
+			<_spliced_to>
+				13966223
+			</_spliced_to>
+			<from>
+				13965717
+			</from>
+			<to>
+				13966223
+			</to>
+		</template>
+		<warnings>
+			retrotranscrito?! estudiar
+		</warnings>
+	</exon>
+	<exon>
+		<chromosome>
+			NW_020837981.1
+		</chromosome>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				13966482
+			</_spliced_from>
+			<_spliced_to>
+				13966964
+			</_spliced_to>
+			<from>
+				13966482
+			</from>
+			<to>
+				13966964
+			</to>
+		</template>
+		<warnings>
+			Lacking residues
+		</warnings>
+	</exon>
+</gene>

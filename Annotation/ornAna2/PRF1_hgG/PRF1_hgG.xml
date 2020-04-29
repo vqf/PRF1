@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 14:13:11, Wed Jan 23, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			chrUn_DS213115v1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				1494
+			</_spliced_from>
+			<_spliced_to>
+				1147
+			</_spliced_to>
+			<from>
+				1494
+			</from>
+			<to>
+				1147
+			</to>
+		</template>
+		<warnings>
+			inicio de contig_podrC-a haber un frameshift pero no lo tengo claro
+		</warnings>
+	</exon>
+</gene>

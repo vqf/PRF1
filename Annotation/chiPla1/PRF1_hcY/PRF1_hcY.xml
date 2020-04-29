@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 17:39:9, Tue Feb 19, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			QPFF01359224.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				6874
+			</_spliced_from>
+			<_spliced_to>
+				6623
+			</_spliced_to>
+			<from>
+				6874
+			</from>
+			<to>
+				6623
+			</to>
+		</template>
+		<warnings>
+			Query does not start at 1
+		</warnings>
+	</exon>
+	<exon>
+		<chromosome>
+			QPFF01359224.1
+		</chromosome>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				4300
+			</_spliced_from>
+			<_spliced_to>
+				3809
+			</_spliced_to>
+			<from>
+				4300
+			</from>
+			<to>
+				3809
+			</to>
+		</template>
+		<warnings>
+			Lacking residues
+		</warnings>
+	</exon>
+</gene>

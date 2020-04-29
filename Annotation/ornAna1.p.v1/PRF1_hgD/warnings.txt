@@ -1,0 +1,5 @@
+Exon 1: Query does not start at 1
+Exon 2: frameshift
+Exon 3: frameshift
+Exon 4: frameshift
+Exon 5: frameshift

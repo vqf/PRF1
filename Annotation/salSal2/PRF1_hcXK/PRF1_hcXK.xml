@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 18:35:16, Tue Dec 17, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			NC_027314.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				2337200
+			</_spliced_from>
+			<_spliced_to>
+				2337042
+			</_spliced_to>
+			<from>
+				2337200
+			</from>
+			<to>
+				2337042
+			</to>
+		</template>
+	</exon>
+	<exon>
+		<chromosome>
+			NC_027314.1
+		</chromosome>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				2336740
+			</_spliced_from>
+			<_spliced_to>
+				2336480
+			</_spliced_to>
+			<from>
+				2336740
+			</from>
+			<to>
+				2336480
+			</to>
+		</template>
+	</exon>
+</gene>

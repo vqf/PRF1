@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 9:59:6, Wed Feb 6, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			NW_019873592.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				6022763
+			</_spliced_from>
+			<_spliced_to>
+				6022419
+			</_spliced_to>
+			<from>
+				6022763
+			</from>
+			<to>
+				6022419
+			</to>
+		</template>
+		<warnings>
+			no parece tene un frameshift en el exon1 como en el resto de cetaceos
+		</warnings>
+	</exon>
+	<exon>
+		<chromosome>
+			NW_019873592.1
+		</chromosome>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				6022002
+			</_spliced_from>
+			<_spliced_to>
+				6021514
+			</_spliced_to>
+			<from>
+				6022002
+			</from>
+			<to>
+				6021514
+			</to>
+		</template>
+		<warnings>
+			Lacking residues
+		</warnings>
+	</exon>
+</gene>

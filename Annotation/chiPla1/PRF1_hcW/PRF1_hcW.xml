@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 17:36:48, Tue Feb 19, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			QPFF01568776.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				58
+			</_spliced_from>
+			<_spliced_to>
+				363
+			</_spliced_to>
+			<from>
+				58
+			</from>
+			<to>
+				363
+			</to>
+		</template>
+	</exon>
+</gene>

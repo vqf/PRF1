@@ -1,0 +1,4 @@
+Exon 1: frameshift
+Exon 3: Lacking residues
+Exon 4: frameshift
+Exon 6: frameshift

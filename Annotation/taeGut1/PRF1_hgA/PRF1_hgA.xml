@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 16:36:27, Thu Feb 7, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			CM012098.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				115398
+			</_spliced_from>
+			<_spliced_to>
+				114858
+			</_spliced_to>
+			<from>
+				115398
+			</from>
+			<to>
+				114859
+			</to>
+		</template>
+		<warnings>
+			Query does not start at 1
+		</warnings>
+	</exon>
+	<exon>
+		<chromosome>
+			CM012098.1
+		</chromosome>
+		<frame>
+			1
+		</frame>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				113930
+			</_spliced_from>
+			<_spliced_to>
+				113494
+			</_spliced_to>
+			<from>
+				113931
+			</from>
+			<to>
+				113494
+			</to>
+		</template>
+		<warnings>
+			Lacking residues
+		</warnings>
+	</exon>
+</gene>

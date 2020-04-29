@@ -1,0 +1,2 @@
+Exon 1: frameshift exon1
+Exon 2: solo arte del exon2

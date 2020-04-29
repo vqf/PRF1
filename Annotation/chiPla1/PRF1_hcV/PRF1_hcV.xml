@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 17:32:45, Tue Feb 19, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			QPFF01340040.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				12
+			</_spliced_from>
+			<_spliced_to>
+				413
+			</_spliced_to>
+			<from>
+				12
+			</from>
+			<to>
+				413
+			</to>
+		</template>
+		<warnings>
+			Query does not start at 1
+		</warnings>
+	</exon>
+</gene>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 18:32:13, Tue Dec 17, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			NC_027314.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				2269812
+			</_spliced_from>
+			<_spliced_to>
+				2269654
+			</_spliced_to>
+			<from>
+				2269812
+			</from>
+			<to>
+				2269654
+			</to>
+		</template>
+		<warnings>
+			weird first methionine
+		</warnings>
+	</exon>
+	<exon>
+		<chromosome>
+			NC_027314.1
+		</chromosome>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				2267359
+			</_spliced_from>
+			<_spliced_to>
+				2267099
+			</_spliced_to>
+			<from>
+				2267359
+			</from>
+			<to>
+				2267099
+			</to>
+		</template>
+	</exon>
+</gene>

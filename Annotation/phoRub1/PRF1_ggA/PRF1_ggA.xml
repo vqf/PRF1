@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 13:50:47, Wed Feb 13, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			JJRE01005009.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				687
+			</_spliced_from>
+			<_spliced_to>
+				10
+			</_spliced_to>
+			<from>
+				687
+			</from>
+			<to>
+				10
+			</to>
+		</template>
+		<warnings>
+			parte del exon2, extC alargado
+		</warnings>
+	</exon>
+</gene>

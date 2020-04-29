@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 16:24:32, Tue Feb 19, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			QPFF01502143.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				6985
+			</_spliced_from>
+			<_spliced_to>
+				5264
+			</_spliced_to>
+			<from>
+				6985
+			</from>
+			<to>
+				5264
+			</to>
+		</template>
+		<warnings>
+			retrotranscrito
+		</warnings>
+	</exon>
+</gene>

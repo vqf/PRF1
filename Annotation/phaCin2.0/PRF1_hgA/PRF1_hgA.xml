@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 18:27:39, Tue Feb 5, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			FUWB01000929.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				118950
+			</_spliced_from>
+			<_spliced_to>
+				119497
+			</_spliced_to>
+			<from>
+				118950
+			</from>
+			<to>
+				119498
+			</to>
+		</template>
+		<warnings>
+			splicing raro
+		</warnings>
+	</exon>
+	<exon>
+		<chromosome>
+			FUWB01000929.1
+		</chromosome>
+		<frame>
+			-1
+		</frame>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				121004
+			</_spliced_from>
+			<_spliced_to>
+				122132
+			</_spliced_to>
+			<from>
+				121005
+			</from>
+			<to>
+				122132
+			</to>
+		</template>
+	</exon>
+</gene>

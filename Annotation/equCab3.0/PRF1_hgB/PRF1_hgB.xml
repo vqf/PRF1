@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 12:48:25, Wed Feb 6, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			NC_009144.3
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				59142390
+			</_spliced_from>
+			<_spliced_to>
+				59141877
+			</_spliced_to>
+			<from>
+				59142390
+			</from>
+			<to>
+				59141875
+			</to>
+		</template>
+	</exon>
+	<exon>
+		<chromosome>
+			NC_009144.3
+		</chromosome>
+		<frame>
+			-2
+		</frame>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				59141465
+			</_spliced_from>
+			<_spliced_to>
+				59140924
+			</_spliced_to>
+			<from>
+				59141463
+			</from>
+			<to>
+				59140924
+			</to>
+		</template>
+		<warnings>
+			Lacking residues
+		</warnings>
+	</exon>
+</gene>

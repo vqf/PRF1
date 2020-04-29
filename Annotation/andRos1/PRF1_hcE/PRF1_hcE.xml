@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 12:59:5, Mon Feb 18, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			LTYT01011833.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				41985
+			</_spliced_from>
+			<_spliced_to>
+				41441
+			</_spliced_to>
+			<from>
+				41985
+			</from>
+			<to>
+				41443
+			</to>
+		</template>
+	</exon>
+	<exon>
+		<chromosome>
+			LTYT01011833.1
+		</chromosome>
+		<frame>
+			2
+		</frame>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				41175
+			</_spliced_from>
+			<_spliced_to>
+				40152
+			</_spliced_to>
+			<from>
+				41177
+			</from>
+			<to>
+				40152
+			</to>
+		</template>
+	</exon>
+</gene>

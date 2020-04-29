@@ -1,0 +1,2 @@
+Exon 1: exon1 frameshift
+Exon 2: exon2 framshift

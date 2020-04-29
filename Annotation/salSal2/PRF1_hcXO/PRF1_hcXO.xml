@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 18:51:56, Tue Dec 17, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			NC_027314.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				90759538
+			</_spliced_from>
+			<_spliced_to>
+				90759152
+			</_spliced_to>
+			<from>
+				90759538
+			</from>
+			<to>
+				90759152
+			</to>
+		</template>
+		<warnings>
+			just an exon
+		</warnings>
+	</exon>
+</gene>

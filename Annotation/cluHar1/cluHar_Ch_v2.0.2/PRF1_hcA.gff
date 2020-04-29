@@ -1,0 +1,7 @@
+##assembly name=Ch_v2.0.2
+##assembly accession=GCF_900700415.1
+#gtf-version 2.2
+NC_045152.1	RefSeq	gene	294512	297267	.	-	.	gene_id "unknown_gene_1"; PRF1_hcA ""; 
+NC_045152.1	RefSeq	exon	294512	295370	.	-	.	gene_id "unknown_gene_1"; transcript_id "unknown_transcript_1"; PRF1_hcA ""; exon_number "1"; 
+NC_045152.1	RefSeq	exon	295639	295856	.	-	.	gene_id "unknown_gene_1"; transcript_id "unknown_transcript_2"; PRF1_hcA ""; exon_number "1"; 
+NC_045152.1	RefSeq	exon	296735	297267	.	-	.	gene_id "unknown_gene_1"; transcript_id "unknown_transcript_3"; PRF1_hcA ""; exon_number "1"; 

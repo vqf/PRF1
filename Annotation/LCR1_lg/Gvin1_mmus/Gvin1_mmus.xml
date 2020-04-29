@@ -1,0 +1,29 @@
+<gene>
+	<exon>
+		<chromosome>
+			Contig687
+		</chromosome>
+		<query>
+			<from>
+				863
+			</from>
+			<to>
+				1194
+			</to>
+		</query>
+		<template>
+			<from>
+				335279
+			</from>
+			<to>
+				336223
+			</to>
+		</template>
+		<warnings>
+			Query does not start at 1
+		</warnings>
+	</exon>
+</gene>
+
+
+

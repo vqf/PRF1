@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 10:57:2, Thu Jan 24, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			NINY01007715.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				8116734
+			</_spliced_from>
+			<_spliced_to>
+				8116196
+			</_spliced_to>
+			<from>
+				8116734
+			</from>
+			<to>
+				8116198
+			</to>
+		</template>
+	</exon>
+	<exon>
+		<chromosome>
+			NINY01007715.1
+		</chromosome>
+		<frame>
+			2
+		</frame>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				8115322
+			</_spliced_from>
+			<_spliced_to>
+				8114194
+			</_spliced_to>
+			<from>
+				8115324
+			</from>
+			<to>
+				8114194
+			</to>
+		</template>
+	</exon>
+</gene>

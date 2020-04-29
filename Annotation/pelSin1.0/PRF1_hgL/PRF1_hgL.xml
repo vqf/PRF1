@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 12:4:34, Wed Mar 13, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			NW_005858547.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				194024
+			</_spliced_from>
+			<_spliced_to>
+				193513
+			</_spliced_to>
+			<from>
+				194024
+			</from>
+			<to>
+				193512
+			</to>
+		</template>
+		<warnings>
+			Query does not start at 1
+		</warnings>
+	</exon>
+	<exon>
+		<chromosome>
+			NW_005858547.1
+		</chromosome>
+		<frame>
+			-1
+		</frame>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				193133
+			</_spliced_from>
+			<_spliced_to>
+				192095
+			</_spliced_to>
+			<from>
+				193132
+			</from>
+			<to>
+				192095
+			</to>
+		</template>
+	</exon>
+</gene>

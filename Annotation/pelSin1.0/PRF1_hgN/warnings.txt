@@ -1,0 +1,1 @@
+Exon 3: Query does not start at 1

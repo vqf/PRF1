@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 18:54:33, Tue Dec 17, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			NC_027314.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				90781040
+			</_spliced_from>
+			<_spliced_to>
+				90780660
+			</_spliced_to>
+			<from>
+				90781040
+			</from>
+			<to>
+				90780660
+			</to>
+		</template>
+		<warnings>
+			just an exon_endTC cut by Ns
+		</warnings>
+	</exon>
+</gene>

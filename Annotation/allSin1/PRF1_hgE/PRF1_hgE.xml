@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 11:24:59, Fri Jan 25, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			NW_005843413.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				156601
+			</_spliced_from>
+			<_spliced_to>
+				157136
+			</_spliced_to>
+			<from>
+				156601
+			</from>
+			<to>
+				157137
+			</to>
+		</template>
+		<warnings>
+			frameshift exon1
+		</warnings>
+	</exon>
+	<exon>
+		<chromosome>
+			NW_005843413.1
+		</chromosome>
+		<frame>
+			-1
+		</frame>
+		<number>
+			2
+		</number>
+		<template>
+			<_spliced_from>
+				157442
+			</_spliced_from>
+			<_spliced_to>
+				157814
+			</_spliced_to>
+			<from>
+				157443
+			</from>
+			<to>
+				157814
+			</to>
+		</template>
+		<warnings>
+			solo arte del exon2
+		</warnings>
+	</exon>
+</gene>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!-- Updated 13:7:23, Fri Jan 25, 2019 -->
+<gene>
+	<exon>
+		<chromosome>
+			NW_017711872.1
+		</chromosome>
+		<number>
+			1
+		</number>
+		<template>
+			<_spliced_from>
+				158056
+			</_spliced_from>
+			<_spliced_to>
+				158442
+			</_spliced_to>
+			<from>
+				158056
+			</from>
+			<to>
+				158442
+			</to>
+		</template>
+		<warnings>
+			parte exon2_dominio C2, exclusivo de PRF1
+		</warnings>
+	</exon>
+</gene>
