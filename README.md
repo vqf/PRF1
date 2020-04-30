@@ -18,6 +18,7 @@ There are three folders with the analyses of mammalian PRF1 sequences (`mammals`
 
 # Species symbols and assemblies
 
+
 |Annotation project | Species | Assembly|
 |---|---|
 |allMis4 | Alligator mississippiensis | GCA_000281125.4|
